@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Raman Choudhary | I Work in Pixles & Code</title>
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/animate.css/animate.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--      Jquery-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="public/js/lib/greensock/TimelineLite.min.js"></script>
+<!--
+
+
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,900|Dosis:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
+-->
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>-->
+
+
+    <script src="public/js/lib/typed.js"></script>
+    <!-- Angular -->
+    <script src="public/bower_components/angular/angular.min.js"></script>
+    <script src="public/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="public/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="public/js/magic.js"></script>
+
+</head>
+
+<body ng-app="batman" ng-controller="MainCtrl">
+
+    <div class="loader" ng-hide="loaded">
+        <div class="holder">
+            Content is Loading bitch!
+        </div>
+    </div>
+
+   
+
+          <span class="sidebar-btn" ng-click="isOpen = !isOpen">
+            <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
+            <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
+      </span>
+        
+  
+
+
+    <span class="sidebar-btn" ng-click="isOpen = !isOpen">
+            <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
+            <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
+      </span>
+
+    <div class="sidebar animated fadeIn" ng-class="{'fadeOut':!isOpen,'sidebar-open':isOpen}">
+        <!-- Background Shape for Sidemenu -->
+
+        <div class="quote visible-md visible-lg ">
+            <h5 class="qod animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">
+               QUOTE OF THE DAY
+               </h5>
+
+            <h1 class="qqqq animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">"
+            Design is not just what it looks like and feels like. 
+            Design is how it works."
+            </h1>
+
+            <h5 class="by animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">
+            - Steve Jobs
+            </h5>
+        </div>
+
+        <div class="bg-menu3" ng-class="{'dropIn3':isOpen, 'dropOut3':!isOpen}"></div>
+        <div class="bg-menu2" ng-class="{'dropIn2':isOpen, 'dropOut2':!isOpen}"></div>
+        <div class="bg-menu" ng-class="{'dropIn1':isOpen, 'dropOut1':!isOpen}"></div>
+        <div class="side-menu">
+            
+        
+            
+            <ul>
+                <li><h5>Menu</h5></li>
+                <li ng-click="isOpen = !isOpen" ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}">{{i.item}}</a>
+                </li>
+            </ul>
+<!--
+            <div class="social">
+                <a href="http://" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="http://" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="http://" target="_blank">
+                    <i class="fa fa-codepen"></i>
+                </a>
+                <a href="http://" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="http://" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+-->
+
+
+        </div>
+    </div>
+
+    <section class="view" ng-view>
+
+    </section>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  
+
+</body>
+
+</html>
