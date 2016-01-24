@@ -1,0 +1,39 @@
+{
+  "name": "typedof",
+  "version": "0.0.1",
+  "description": "better type checking",
+  "main": "y",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jwerle/typedof.git"
+  },
+  "keywords": [
+    "type",
+    "checking"
+  ],
+  "author": "Joseph Werle <joseph.werle@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "firefox/3.6",
+      "firefox/4",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/4",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}

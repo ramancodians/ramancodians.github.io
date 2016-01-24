@@ -1,0 +1,128 @@
+
+.wrapper{
+    margin-top: 100px;
+    
+    @include tablet{
+        padding: 20px;
+        margin-top: 20px;
+    }
+      
+  
+    
+    & > .row {
+        max-width: 700px;
+        margin: 0px auto;
+        color: #ffffff;
+    }    
+    // with .row
+    .hello{        
+        & > div{
+            height: 200px;            
+        }        
+        & > div:nth-child(2){
+              background: $base-color;
+             transform: translate(0px,55px);
+            
+            & > div{
+                padding: 20px;
+                z-index: 10;
+                text-align: right;
+                
+                h3{
+                    display: inline-block;                  
+                    font-family: $font-header;
+                    font-size: 40px;       
+                    margin-top: 60px;
+                    
+                }
+            }
+        }
+          & > div:nth-child(3){
+        }
+        .meri-photo{          
+             //transform: translate(-105px,120px);
+            transform: scale(2);
+            margin-left: 86px;
+           // width: 1000px;
+           
+            
+            @include tablet{
+                transform:translate(-15px,22px);
+                transform: scale(1);
+                margin-left: -15px;
+                height: 200px;
+                width: 175px !important;
+               
+                
+            }
+           
+        }
+    }
+    
+    .me{
+        & div:nth-child(1){
+            padding: 10px;
+            text-align: right;
+            background: $base-color - 30;
+           
+            h1,h5{
+                 font-family: $font-header;
+            }
+        }
+    }
+    
+    .do{        
+        & > div{
+            min-height: 175px;
+        }
+            & > div:nth-child(2){
+                background: $base-color - 40;
+                padding: 35px;
+                font-size: 25px;
+                text-align: center;
+               
+            }
+            & > div:nth-child(3){
+                background: $base-color + 10;
+                padding: 20px;
+                h1,h3{
+                     font-family: $font-header;
+                }
+                
+                #typed{
+                    font-family: $font-coder;
+                }
+            }
+        
+        .pp{
+            position: absolute;
+            //background: red;
+            top: 0px;
+            transform: rotate(150deg) scale(0.5) translate(400px,1100px);
+            z-index: -1;
+            text-shadow: 2px 2px 0px $base-color - 90;
+           
+        }
+           
+        }
+    .take{
+        text-align: center;
+        padding: 20px;
+        button{
+         color: $base-color;
+        }
+    }
+    
+    .social{
+        text-align: center;
+        a{
+            padding: 10px;
+            //background: red;
+            margin: 0px 10px;
+            font-size: 25px;
+            color: #6a6a6a;
+            
+        }
+    }
+    
+}

@@ -1,0 +1,33 @@
+<div class="row new-project">
+    <div class="col-xs-6 col-sm-5" ng-class="{'opacity-hide':getPreviousProject() == undefined }">
+
+        <div>
+            <a href="#/projects/{{getPreviousProject()}}">
+                <h3><i class="fa fa-arrow-left"></i> Previous</h3>
+                 </a>
+                <h4 class="text-sub text-capitalize">
+            {{getPreviousProject()}}
+            </h4>
+           
+        </div>
+
+    </div>
+    <div class="col-xs-2 col-sm-2 hidden-xs text-center">
+        <div class="pagination">
+            {{(getScore()+1)*100}}/800
+        </div>
+
+    </div>
+
+    <div class="col-xs-6 col-sm-5 text-right" ng-class="{'opacity-hide':getNextProject() == undefined }">
+
+        <div>
+            <a href="#/projects/{{getNextProject()}}">
+                <h3>Next <i class="fa fa-arrow-right"></i></h3>
+                </a>
+                <h4 class="text-sub text-capitalize">{{getNextProject()}}</h4>
+            
+        </div>
+
+    </div>
+</div>

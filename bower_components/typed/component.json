@@ -1,0 +1,15 @@
+{
+  "name": "typedof",
+  "repo": "jwerle/typedof",
+  "description": "better type checking",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/assert": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

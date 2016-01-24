@@ -1,0 +1,20 @@
+
+.project{
+    header{
+        min-height: 500px;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        
+        .bg{
+            width: 100%;
+        }
+        
+    }
+    
+    .container{
+        margin-top: 550px;
+    }
+}
