@@ -6,7 +6,7 @@ $font-coder: 'Bree Serif',
 serif;
 $font-para: 'Josefin Slab',
 serif;
-$base-color: #31a0c9;
+//$base-color: #002431;
 $base-color: #31C3C9;
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
@@ -109,6 +109,7 @@ $ani-sidebar: 0.5s;
 body {
     overflow-x: hidden;
     background: #f3f4f5;
+   // background: #0080ff;
 }
 
 .view {
@@ -224,6 +225,8 @@ body {
         left: 75%;
         z-index: -1;
         transform: rotate(-20deg);
+        border: 2px solid rgba(#fff,0.4);
+        
         @include tablet {
             transform: rotate(-6deg);
             left: 20%;
@@ -1007,15 +1010,21 @@ body {
             color: $base-color;
         }
     }
-    .social {
+    .profiles {
         text-align: center;
-        display: none;
+        padding: 20px;
+        margin-top: 20px;
+      
         a {
             padding: 10px;
             //background: red;
             margin: 0px 10px;
-            font-size: 25px;
+            //font-size: 25px;
             color: #6a6a6a;
+            
+            &:hover{
+                color: dodgerblue;
+            }
         }
     }
 }
