@@ -10,8 +10,6 @@ serif;
 $base-color: #31C3C9;
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
-
-
 .loader {
     display: block;
     height: 100%;
@@ -109,7 +107,7 @@ $ani-sidebar: 0.5s;
 body {
     overflow-x: hidden;
     background: #f3f4f5;
-   // background: #0080ff;
+    // background: #0080ff;
 }
 
 .view {
@@ -225,8 +223,7 @@ body {
         left: 75%;
         z-index: -1;
         transform: rotate(-20deg);
-        border: 2px solid rgba(#fff,0.4);
-        
+        border: 2px solid rgba(#fff, 0.4);
         @include tablet {
             transform: rotate(-6deg);
             left: 20%;
@@ -595,7 +592,6 @@ body {
     background-position: top;
     background-size: cover;
     font-family: $font-coder;
-    
     &:before {
         content: '';
         top: 0px;
@@ -603,7 +599,7 @@ body {
         height: 100%;
         width: 100%;
         position: absolute;
-        background: rgba(#000,0.8);
+        background: rgba(#000, 0.8);
     }
     .header {
         position: relative;
@@ -966,6 +962,24 @@ body {
                     font-size: 50px;
                 }
             }
+           
+            svg {
+                width: 100%;
+            }
+            .icon path {
+                fill: transparent;
+                stroke: #FFF;
+                stroke-width: 5px;
+                transition: stroke-dashoffset 1s linear, fill 0.2s ease 0.4s;
+                stroke-dasharray: 1700px;
+                stroke-dashoffset: -1700px;
+                box-shadow: 3px 3px 0px rgba(150, 150, 150, 1);
+            }
+            .icon.draw path {
+                stroke-dashoffset: 0px;
+                fill: #FFF;
+                transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s;
+            }
         }
         & > div:nth-child(3) {
             background: $base-color + 10;
@@ -1014,15 +1028,13 @@ body {
         text-align: center;
         padding: 20px;
         margin-top: 20px;
-      
         a {
             padding: 10px;
             //background: red;
             margin: 0px 10px;
             //font-size: 25px;
             color: #6a6a6a;
-            
-            &:hover{
+            &:hover {
                 color: dodgerblue;
             }
         }

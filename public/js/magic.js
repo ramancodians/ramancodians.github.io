@@ -113,9 +113,37 @@ app.controller('WorkCtrl', function ($scope) {
     });
 });
 
-app.controller('HomeCtrl', function ($scope) {
+app.controller('HomeCtrl', function ($scope,$interval,$timeout) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
+        var time = 0;
+        $scope.draw = false;
+        
+        //icon stack
+        $scope.iconStack = [1,0,0,0];
+        
+       
+            
+            // animating Code Icon
+            $timeout(function(){
+                console.log('timeout called 1');
+                $('.icon').addClass('draw');
+            },200);
+            
+            $timeout(function(){
+                console.log('timeout called 2');
+                $('.icon').removeClass('draw');
+            },2800);
+        
+        $timeout(function(){
+                console.log('timeout called 3');
+            $scope.iconStack[0,1,0,0];
+                $('.icon').addClass('draw');
+            },3000);
+        
+            
+            
+      
     });
 });
 
