@@ -40,8 +40,8 @@
                 <div class="animated">
                     <!--                    <img class="img-responsive" src="img/tools/brackets.png">-->
 
-                    <div class="icon" ng-click="draw = !draw" ng-class="{'draw':draw}">
-                        <svg ng-show="iconStack[0]" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">
+                    <div class="icon">
+                        <svg version="1.1" id="code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">
                             <g>
                                 <path d="M462.806,68.109H27.193C12.199,68.109,0,80.307,0,95.301v299.396c0,14.994,12.199,27.193,27.193,27.193h435.613
 		c14.995,0,27.194-12.199,27.194-27.193V95.301C490,80.307,477.801,68.109,462.806,68.109z M27.193,88.109h435.613
@@ -89,7 +89,7 @@
                             </g>
                         </svg>
 
-                        <svg ng-show="iconStack[1]"version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463.003 463.003" style="enable-background:new 0 0 463.003 463.003;" xml:space="preserve">
+                        <svg version="1.1" id="bulb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463.003 463.003" style="enable-background:new 0 0 463.003 463.003;" xml:space="preserve">
                             <g>
                                 <path d="M346.777,45.98C313.12,14.043,268.973-2.202,222.482,0.24c-41.92,2.2-81.372,20.344-111.088,51.087
 		c-29.703,30.73-46.522,70.777-47.358,112.763c-0.637,31.984,7.766,63.24,24.3,90.391c16.051,26.356,39.013,47.765,66.404,61.912
@@ -151,7 +151,7 @@
                             </g>
                         </svg>
                       
-                          <svg ng-show="iconStack[2]"version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                          <svg version="1.1" id="blog" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
  viewBox="0 0 415.361 415.361" style="enable-background:new 0 0 415.361 415.361;"
 	 xml:space="preserve">
 <g>
@@ -198,7 +198,7 @@
 </g>
 </svg>
 
-<svg ng-show="iconStack[3]"version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="explorer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 680.773 680.772" style="enable-background:new 0 0 680.773 680.772;"
 	 xml:space="preserve">
 <g>
@@ -272,7 +272,7 @@
             <div class="col-xs-8">
                 <div>
                     <h3>A young</h3>
-                    <h1><span id="typed">Front-End Developer</span></h1>
+                    <h1><span id="typed" ng-click="breakIt = false">Front-End Developer</span></h1>
                 </div>
             </div>
         </div>
@@ -341,11 +341,12 @@
 <script>
     $(function () {
         $("#typed").typed({
-            strings: ["Full Stack Designer^2000", "Innovator^1000", "Blogger^1000", "Explorer^500!^00!"],
+            strings: ["Full Stack Designer^500.^500.^500.", "Innovator^500.^500.^500.", "Blogger^1000", "Explorer^500!^00!"],
             typeSpeed: 2,
             loop: true
         });
 
+        
 
         $('.meri-photo').mouseenter(function () {
             $('.meri-photo').attr('ng-src', 'img/me-side.png');

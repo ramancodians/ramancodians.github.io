@@ -468,7 +468,7 @@ body {
             display: inline-block;
             position: relative;
             overflow: hidden;
-            transition-duration: 1s;
+            //transition-duration: 1s;
             margin-top: -5px;
             @include tablet {
                 margin-bottom: 20px;
@@ -962,24 +962,35 @@ body {
                     font-size: 50px;
                 }
             }
-           
             svg {
                 width: 100%;
+            }
+            svg#code {
+                display:block;
+            }
+            svg#blog {
+                display: none;
+            }
+            svg#bulb {
+                display: none;
+            }
+            svg#explorer {
+                display: none;
             }
             .icon path {
                 fill: transparent;
                 stroke: #FFF;
-                stroke-width: 5px;
-                transition: stroke-dashoffset 1s linear, fill 0.2s ease 0.4s;
-                stroke-dasharray: 1700px;
+                stroke-width: 10px;
+                transition: stroke-dashoffset 0.5s linear, fill 0.2s ease 0.4s;
+                  stroke-dasharray: 1700px;
                 stroke-dashoffset: -1700px;
                 box-shadow: 3px 3px 0px rgba(150, 150, 150, 1);
             }
-            .icon.draw path {
+            .icon svg.draw path {
                 stroke-dashoffset: 0px;
                 fill: #FFF;
                 transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s;
-            }
+            
         }
         & > div:nth-child(3) {
             background: $base-color + 10;

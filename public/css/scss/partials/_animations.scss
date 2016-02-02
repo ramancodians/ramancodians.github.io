@@ -1,4 +1,28 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
 
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
 
 .typed-cursor{
     opacity: 1;
@@ -189,3 +213,5 @@
      animation: dropIn3 $ani-sidebar ease-out;
      transition-delay: 1s;
 }
+
+

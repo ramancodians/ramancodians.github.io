@@ -14,7 +14,7 @@ app.config(['$routeProvider',
                 templateUrl: 'public/views/projects.html',
                 controller: 'ProjectCtrl'
             })
-             .when('/credits', {
+            .when('/credits', {
                 templateUrl: 'public/views/credits.html',
                 controller: 'CreditsCtrl'
             })
@@ -113,37 +113,22 @@ app.controller('WorkCtrl', function ($scope) {
     });
 });
 
-app.controller('HomeCtrl', function ($scope,$interval,$timeout) {
+app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
         var time = 0;
         $scope.draw = false;
-        
+
         //icon stack
-        $scope.iconStack = [1,0,0,0];
+        $scope.iconStack = [1, 0, 0, 0];
         
-       
-            
-            // animating Code Icon
-            $timeout(function(){
-                console.log('timeout called 1');
-                $('.icon').addClass('draw');
-            },200);
-            
-            $timeout(function(){
-                console.log('timeout called 2');
-                $('.icon').removeClass('draw');
-            },2800);
+        var iconStack = $('.icon');
         
-        $timeout(function(){
-                console.log('timeout called 3');
-            $scope.iconStack[0,1,0,0];
-                $('.icon').addClass('draw');
-            },3000);
+        var iconAnimation = new TimelineLite();
         
-            
-            
-      
+        //iconAnimation.from(".icon svg:code",2,{strokeDasharray:500,strokeDashoffset:-1000,delay:0});
+        
+        
     });
 });
 
@@ -163,35 +148,37 @@ app.controller('AboutCtrl', function ($scope) {
 //**********************************
 //Project Controller
 //**********************************
-app.controller('ProjectCtrl', function ($scope, $routeParams,$location) {
-    $scope.projectList = ['bunky', 'prayas', 'christcode', 'naturalcrown', 'howhigh', 'connecto', 'studyalley','u25'];
-    
+app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
+    $scope.projectList = ['bunky', 'prayas', 'christcode', 'naturalcrown', 'howhigh', 'connecto', 'studyalley', 'u25'];
+
     $('body').scrollTop(0);
     
-    $scope.getPreviousProject = function(){
-       var currentLocation = $location.$$path.substring(10,$location.$$path.length);
-       var i = $scope.projectList.indexOf(currentLocation);
-       return $scope.projectList[i-1];
+  
+
+    $scope.getPreviousProject = function () {
+        var currentLocation = $location.$$path.substring(10, $location.$$path.length);
+        var i = $scope.projectList.indexOf(currentLocation);
+        return $scope.projectList[i - 1];
     };
-    
-     $scope.getNextProject = function(){
-       var currentLocation = $location.$$path.substring(10,$location.$$path.length);
-       var i = $scope.projectList.indexOf(currentLocation);
-       return $scope.projectList[i+1];
+
+    $scope.getNextProject = function () {
+        var currentLocation = $location.$$path.substring(10, $location.$$path.length);
+        var i = $scope.projectList.indexOf(currentLocation);
+        return $scope.projectList[i + 1];
     };
-    
-    $scope.getScore = function(){
-        return $scope.projectList.indexOf($location.$$path.substring(10,$location.$$path.length));
+
+    $scope.getScore = function () {
+        return $scope.projectList.indexOf($location.$$path.substring(10, $location.$$path.length));
     };
-    
+
     console.log($routeParams);
 });
 
 //**********************************
 //Credit Controller
 //**********************************
-app.controller('CreditsCtrl', function ($scope, $routeParams,$location) {
-  
+app.controller('CreditsCtrl', function ($scope, $routeParams, $location) {
+
     console.log("credit page launched!");
-    
+
 });
