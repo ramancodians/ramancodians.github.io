@@ -8,6 +8,7 @@ $font-para: 'Josefin Slab',
 serif;
 //$base-color: #002431;
 $base-color: #31C3C9;
+
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
 .loader {
@@ -964,19 +965,15 @@ body {
             }
             svg {
                 width: 100%;
-            }
-            svg#code {
-                display:block;
-            }
-            svg#blog {
                 display: none;
             }
-            svg#bulb {
-                display: none;
+            
+           
+            svg.show{
+                 display: block!important;
+               // background: red;
             }
-            svg#explorer {
-                display: none;
-            }
+          
             .icon path {
                 fill: transparent;
                 stroke: #FFF;
@@ -992,28 +989,7 @@ body {
                 transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s;
             
         }
-        & > div:nth-child(3) {
-            background: $base-color + 10;
-            padding: 20px;
-            h1,
-            h3 {
-                font-family: $font-header;
-                @include tablet {
-                    margin: 0px;
-                }
-            }
-            h3 {
-                @include tablet {
-                    font-size: 15px;
-                }
-            }
-            #typed {
-                font-family: $font-coder;
-                @include tablet {
-                    font-size: 20px;
-                }
-            }
-        }
+      
         .pp {
             position: absolute;
             //background: red;
@@ -1050,6 +1026,7 @@ body {
             }
         }
     }
+      
 }
 
 .contact {
@@ -1096,7 +1073,7 @@ body {
         padding-top: 10px;
         padding-bottom: 10px;
         overflow: hidden;
-        background: transparent;
+        background: #FFF;
         font-family: $font-coder;
         outline: 0;
         color: #2DCC70;
@@ -1127,7 +1104,8 @@ body {
         font-size: 25px;
     }
 }
-
+    
+}
 
 /* -------------------------------- 
 svg cover layer
@@ -1154,3 +1132,28 @@ svg cover layer
     -moz-transition: opacity 0.6s;
     transition: opacity 0.6s;
 }
+
+ .whatIam {
+            background: $base-color + 10;
+            padding: 20px;
+            font-family: $font-header;
+            
+            h1,
+            h3 {
+                font-family: $font-header;
+                @include tablet {
+                    margin: 0px;
+                }
+            }
+            h3 {
+                @include tablet {
+                    font-size: 15px;
+                }
+            }
+            #typed {
+                font-family: $font-coder;
+                @include tablet {
+                    font-size: 20px;
+                }
+            }
+        }

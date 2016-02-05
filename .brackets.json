@@ -5,8 +5,8 @@
             "sass.options": {
                 "outputDir": "../",
                 "includePaths": [],
-                "sourceComments": "map",
-                "outputStyle": "compressed"
+                "sourceComments": true,
+                "outputStyle": "nested"
             }
         }
     }

@@ -124,9 +124,33 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         
         var iconStack = $('.icon');
         
-        var iconAnimation = new TimelineLite();
+        var iconAnimation = new TimelineLite({repeat: true});
         
-        //iconAnimation.from(".icon svg:code",2,{strokeDasharray:500,strokeDashoffset:-1000,delay:0});
+      
+        console.log("Animation strated");
+        iconAnimation.to(".icon svg#code",0,{className:"+=show"});
+        iconAnimation.to(".icon svg#code",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#code",1,{className:"-=draw"});
+        iconAnimation.to(".icon svg#code",0,{className:"-=show"});
+        
+        iconAnimation.to(".icon svg#bulb",0,{className:"+=show"});
+        iconAnimation.to(".icon svg#bulb",2,{className:"+=draw"});
+        iconAnimation.to(".icon svg#bulb",1,{className:"-=draw"});
+        iconAnimation.to(".icon svg#bulb",0,{className:"-=show"});
+        
+        iconAnimation.to(".icon svg#blog",0,{className:"+=show"});
+        iconAnimation.to(".icon svg#blog",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#blog",1,{className:"-=draw"});
+        iconAnimation.to(".icon svg#blog",0,{className:"-=show"});
+        
+        iconAnimation.to(".icon svg#explorer",0,{className:"+=show"});
+        iconAnimation.to(".icon svg#explorer",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#explorer",1,{className:"-=draw"});
+        iconAnimation.to(".icon svg#explorer",0,{className:"-=show"});
+            
+            
+      
+      
         
         
     });
