@@ -2,59 +2,66 @@
 <section>
     <div class="project" ng-cpntroller="ProjectCtrl">
 
-        <a href="#/projects" class="btn btn-back"><i class="fa fa-arrow-left"></i> <span class="hidden-xs">Go Back</span></a>
+       
+        
+           <div class="header-bg" style="background-color:#FCC328;">
+            <a href="#/projects" class="btn btn-back"><i class="fa fa-arrow-left"></i> <span class="hidden-xs">Go Back</span></a>
+       <div class="container">
+            <div class="row header">
+        <div class="col-sm-8" style="padding-top:70px;">
+           <div class="titles">
+                <h1 style="background-color:#F05A25;">U25 Startup Summit </h1>
+                <br>
+                <br>
+                <a href="http://bunky.in" target="_blank">
+                    <button class="btn btn-yo">
+                        LAUNCH PROJECT
+                    </button>
+
+                </a>
+            </div>
+            
+        <div class="row stats text-center">
+
+        <div class="col-xs-4 col-sm-3">
+            <div class="a-stat">
+                <h6>Git Commits</h6>
+                <h1><i class="fa fa-github"></i></h1>
+                <h4>45</h4>
+
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3">
+            <div class="a-stat">
+                <h6>Project Type</h6>
+                <h1><i class="fa fa-users"></i></h1>
+                <h4>Team</h4>
+
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3">
+            <div class="a-stat">
+                <h6>Role</h6>
+                <h1><i class="fa fa-file-code-o"></i></h1>
+                <h4>Design + Code</h4>
+
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-4">
+            <img src="public/img/work/u25/logo.png">
+        </div>
+    </div>
+           
+       </div>
+   </div>
+        
         <header>
             <!--        <img src="img/work/bunky/header.jpg" class="bg">-->
             <div class="container">
-                <div class="row header">
-                    <div class="col-sm-4">
-                        <div>
-                            <img class="img-responsive app-logo" src="img/work/u25/logo.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-8 titles">
-                        <div>
-                            <h1 class="dl">U25 Startup Summit</h1>
-                            <br>
-                            <a href="http://u25.club" target="_blank">
-                                <button class="btn btn-yo">
-                                    LAUNCH WEBSITE
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row stats text-center">
-                    <div class="col-sm-4 text-right">
-                    </div>
-
-                    <div class="col-xs-4 col-sm-2">
-                        <div class="a-stat">
-                            <h6>Git Commits</h6>
-                            <h1><i class="fa fa-github"></i></h1>
-                            <h4>13</h4>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-4 col-sm-2">
-                        <div class="a-stat">
-                            <h6>Project Type</h6>
-                            <h1><i class="fa fa-user"></i></h1>
-                            <h4>Individual</h4>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-4 col-sm-2">
-                        <div class="a-stat">
-                            <h6>Role</h6>
-                            <h1><i class="fa fa-file-code-o"></i></h1>
-                            <h4>Code</h4>
-
-                        </div>
-                    </div>
-                </div>
-
+                
+                
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-1"></div>
@@ -161,7 +168,7 @@
                                     <h4>Sant Monte</h4>
                                     <h6>Co-founder, Something</h6>
                                 </div>
- <img class="img-responsive img-circle" ng-src="img/people/sant.jpg">
+ <img class="img-responsive img-circle" ng-src="public/img/people/sant.jpg">
                             </div>
                         </div>
 
@@ -172,11 +179,11 @@
                     <div class="col-sm-8">
                         <div class="design-img">
                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xs28B1YuhUI" frameborder="0" allowfullscreen></iframe>
-                            <img src="img/work/u25/screen1.jpg" class="img-responsive">
+                            <img src="public/img/work/u25/screen1.jpg" class="img-responsive">
                         </div>
                     </div>
                 </div>
-                <div class="row new-project" ng-include="'views/partials/projects/next-project.html'">
+                <div class="row new-project" ng-include="'public/views/partials/projects/next-project.html'">
                 </div>
             </div>
         </div>

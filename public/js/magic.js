@@ -126,18 +126,21 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         //icon stack
         $scope.iconStack = [1, 0, 0, 0];
         
-        var iconStack = $('.icon');
-        
+        var iconStack = $('.icon');        
         var iconAnimation = new TimelineMax({repeat: -1});
+        var firstTime = true;
         console.log("Animation strated");
-        iconAnimation.to(".icon svg#code",.5,{className:"+=show"});
-        iconAnimation.to(".icon svg#code",2,{className:"+=draw"});
+       
+     
+             iconAnimation.to(".icon svg#code",.5,{className:"+=show"},1.5);
+      
+        iconAnimation.to(".icon svg#code",3,{className:"+=draw"});
         iconAnimation.to(".icon svg#code",1,{className:"-=draw"});
         iconAnimation.to(".icon svg#code",0,{className:"-=show"});
         
         iconAnimation.to(".icon svg#bulb",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#bulb",2,{className:"+=draw"});
-        iconAnimation.to(".icon svg#bulb",1,{className:"-=draw"});
+        iconAnimation.to(".icon svg#bulb",2.4,{className:"+=draw"});
+        iconAnimation.to(".icon svg#bulb",0.5,{className:"-=draw"});
         iconAnimation.to(".icon svg#bulb",0,{className:"-=show"});
         
         iconAnimation.to(".icon svg#blog",0,{className:"+=show"});
@@ -152,13 +155,14 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         
         var homeAnimation = new TimelineLite();
         var times = 1;
+       
         homeAnimation.from('#helloBox',1*times,{width:20,transformOrigin: "right",left: 300,autoAlpha:0});
         homeAnimation.from('.me div.col-sm-8',1*times,{width:0,left: 400,autoAlpha:0});
         homeAnimation.from('.do .whatIam',.5*times,{width:0,autoAlpha:0});
         homeAnimation.from('.do .col-xs-3',1*times,{width:0,autoAlpha:0},'-=.8');
+          homeAnimation.from('.hello .meri-photo',1*times,{autoAlpha:0,transitionOrigin:"left bottom"});  
         
         
-         homeAnimation.from('.hello .meri-photo',1*times,{autoAlpha:0,y:-50});
          homeAnimation.from('.pp',.5,{autoAlpha:0,rotate:50});
          homeAnimation.from('.take',.5,{autoAlpha:0,y:-50});
       
@@ -192,6 +196,9 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
     
     //project stagger
     TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+    
+
+    
 
     $scope.getPreviousProject = function () {
         var currentLocation = $location.$$path.substring(10, $location.$$path.length);
