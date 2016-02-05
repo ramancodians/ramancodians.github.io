@@ -374,6 +374,10 @@ body {
     }
 }
 
+.para-h{
+     max-width: 700px;
+}
+
 .typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -419,6 +423,8 @@ body {
 .subtitle {
     font-size: 20px;
     font-family: $font-coder;
+    //background: red;
+    max-width: 700px;
 }
 
 .btn-back {
@@ -583,16 +589,18 @@ body {
 }
 
 .header-bg {
-    position: absolute;
-    min-height: 900px;
+    position: relative;
+    height: 450px;
     top: 0px;
     left: 0px;
-    height: 100%;
+    //height: 100%;
     width: 100%;
     background: url("../img/bg.jpg") no-repeat center center fixed #39CBD1;
     background-position: top;
     background-size: cover;
     font-family: $font-coder;
+    overflow: hidden;
+    
     &:before {
         content: '';
         top: 0px;
@@ -600,7 +608,7 @@ body {
         height: 100%;
         width: 100%;
         position: absolute;
-        background: rgba(#000, 0.8);
+       // background: rgba(#000, 0.8);
     }
     .header {
         position: relative;
@@ -608,6 +616,7 @@ body {
         top: 0px;
         left: 0px;
         width: 100%;
+        color: #FFF;
         .app-logo {
             width: 100%;
             max-width: 200px;
@@ -688,8 +697,6 @@ body {
 
 //Project Page
 .project {
-    margin-top: 800px;
-    //background: red;
     .btn-back {
         margin-top: 5px;
         padding: 20px;
@@ -947,6 +954,18 @@ body {
             }
         }
     }
+    
+     .pp {
+            position: absolute;
+            //background: red;
+            top: 0px;
+            transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
+            z-index: -1;
+            text-shadow: 2px 2px 0px $base-color - 90;
+            animation: rotate-particales 150s infinite linear;
+            transform-origin: center;
+        }
+    
     .do {
         & > div:nth-child(2) {
             background: $base-color - 40;
@@ -990,16 +1009,7 @@ body {
             
         }
       
-        .pp {
-            position: absolute;
-            //background: red;
-            top: 0px;
-            transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
-            z-index: -1;
-            text-shadow: 2px 2px 0px $base-color - 90;
-            animation: rotate-particales 150s infinite linear;
-            transform-origin: center;
-        }
+       
         .icon:before {
             animation: icon-chnages 3s infinite linear;
         }
@@ -1157,3 +1167,27 @@ svg cover layer
                 }
             }
         }
+
+//animation
+#helloBox,
+.me div.col-sm-8
+{
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+    
+
+.pp{
+    display: none;
+}
+
+
+.dashline{
+   //background: red;
+    border-top: 2px dashed #ccc;
+        width: 100%;
+    height: 2px;
+    max-width: 700px;
+    margin-bottom: 100px;
+}

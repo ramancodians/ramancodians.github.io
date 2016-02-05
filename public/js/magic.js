@@ -105,6 +105,10 @@ app.controller('MainCtrl', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
+    
+    $scope.sideMenuToggle = function(){
+        $scope.isOpen = !$scope.isOpen;
+    }
 });
 
 app.controller('WorkCtrl', function ($scope) {
@@ -124,12 +128,10 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         
         var iconStack = $('.icon');
         
-        var iconAnimation = new TimelineLite({repeat: true});
-        
-      
+        var iconAnimation = new TimelineMax({repeat: -1});
         console.log("Animation strated");
-        iconAnimation.to(".icon svg#code",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#code",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#code",.5,{className:"+=show"});
+        iconAnimation.to(".icon svg#code",2,{className:"+=draw"});
         iconAnimation.to(".icon svg#code",1,{className:"-=draw"});
         iconAnimation.to(".icon svg#code",0,{className:"-=show"});
         
@@ -139,18 +141,28 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         iconAnimation.to(".icon svg#bulb",0,{className:"-=show"});
         
         iconAnimation.to(".icon svg#blog",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#blog",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#blog",2,{className:"+=draw"});
         iconAnimation.to(".icon svg#blog",1,{className:"-=draw"});
         iconAnimation.to(".icon svg#blog",0,{className:"-=show"});
         
         iconAnimation.to(".icon svg#explorer",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#explorer",3,{className:"+=draw"});
+        iconAnimation.to(".icon svg#explorer",2,{className:"+=draw"});
         iconAnimation.to(".icon svg#explorer",1,{className:"-=draw"});
         iconAnimation.to(".icon svg#explorer",0,{className:"-=show"});
-            
-            
+        
+        var homeAnimation = new TimelineLite();
+        var times = 1;
+        homeAnimation.from('#helloBox',1*times,{width:20,transformOrigin: "right",left: 300,autoAlpha:0});
+        homeAnimation.from('.me div.col-sm-8',1*times,{width:0,left: 400,autoAlpha:0});
+        homeAnimation.from('.do .whatIam',.5*times,{width:0,autoAlpha:0});
+        homeAnimation.from('.do .col-xs-3',1*times,{width:0,autoAlpha:0},'-=.8');
+        
+        
+         homeAnimation.from('.hello .meri-photo',1*times,{autoAlpha:0,y:-50});
+         homeAnimation.from('.pp',.5,{autoAlpha:0,rotate:50});
+         homeAnimation.from('.take',.5,{autoAlpha:0,y:-50});
       
-      
+        
         
         
     });
@@ -167,6 +179,7 @@ app.controller('AboutCtrl', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
+     $('body').scrollTop(0);
 });
 
 //**********************************
@@ -177,7 +190,8 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
 
     $('body').scrollTop(0);
     
-  
+    //project stagger
+    TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 
     $scope.getPreviousProject = function () {
         var currentLocation = $location.$$path.substring(10, $location.$$path.length);

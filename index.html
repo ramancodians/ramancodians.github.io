@@ -90,7 +90,7 @@
             
             <ul>
                 <li><h5>Menu</h5></li>
-                <li ng-click="isOpen = !isOpen" ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}">{{i.item}}</a>
+                <li  ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
                 </li>
             </ul>
 <!--

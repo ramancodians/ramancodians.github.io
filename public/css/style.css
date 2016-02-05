@@ -494,26 +494,30 @@ body {
       border-bottom: 2px solid #23527C; }
 
 /* line 377, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.para-h {
+  max-width: 700px; }
+
+/* line 381, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
 
-/* line 385, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 389, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .btn {
   border-radius: 0px;
   padding: 10px 20px;
   background: none; }
 
-/* line 391, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 395, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .btn-yo {
   border: 2px solid #31C3C9;
   color: #31C3C9;
   font-family: "Dosis", sans-serif;
   position: relative;
   transition-duration: 0.4s; }
-  /* line 397, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 401, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .btn-yo:before {
     content: '';
     width: 0%;
@@ -524,22 +528,23 @@ body {
     left: 0px;
     z-index: -1;
     transition-duration: 0.3s; }
-  /* line 408, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 412, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .btn-yo:hover {
     background: transparent;
     border: 2px solid #86eba1;
     color: #444;
     font-weight: bold; }
-  /* line 414, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 418, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .btn-yo:hover:before {
     width: 100%; }
 
-/* line 419, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 423, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .subtitle {
   font-size: 20px;
-  font-family: "Bree Serif", serif; }
+  font-family: "Bree Serif", serif;
+  max-width: 700px; }
 
-/* line 424, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 430, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .btn-back {
   font-size: 20px;
   color: #ffffff;
@@ -549,40 +554,40 @@ body {
   z-index: 20;
   background: #099ba1; }
   @media (max-width: 767px) {
-    /* line 424, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 430, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .btn-back {
       top: -5px; } }
 
-/* line 438, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 444, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .line {
   width: 30%;
   height: 3px !important;
   display: block;
   background: #fff; }
 
-/* line 445, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 451, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .line.base {
   background: #31C3C9; }
 
-/* line 449, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 455, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .line.right {
   margin-left: 80%; }
 
-/* line 453, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 459, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .line.small {
   width: 50px; }
 
-/* line 457, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 463, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .work {
   margin-bottom: 150px; }
-  /* line 460, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 466, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .work .showcase {
     padding: 50px 0px; }
-    /* line 462, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 468, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .col-sm-6 {
       margin: 0px !important;
       padding: 0px !important; }
-    /* line 466, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 472, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .project {
       min-height: 100px;
       display: inline-block;
@@ -590,24 +595,24 @@ body {
       overflow: hidden;
       margin-top: -5px; }
       @media (max-width: 767px) {
-        /* line 466, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 472, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .project {
           margin-bottom: 20px; } }
-      /* line 477, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 483, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .project:hover > .bg {
         transform: scale(1.1);
         transition-duration: 1s; }
-      /* line 481, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 487, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .project:hover > .details {
         opacity: 1; }
-      /* line 484, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 490, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .project .bg {
         height: auto;
         width: 100%;
         top: 0px;
         left: 0px;
         transition-duration: 1s; }
-      /* line 491, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 497, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .project .details {
         padding: 20%;
         position: absolute;
@@ -624,135 +629,135 @@ body {
         transition-duration: 0.5s;
         padding: 40px auto; }
         @media (max-width: 767px) {
-          /* line 491, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 497, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .work .showcase .project .details {
             position: relative;
             padding: 20px;
             opacity: 1; } }
-        /* line 511, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 517, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .project .details h1 {
           margin: 0px;
           padding: 0px;
           padding-bottom: 10px;
           color: #FFF; }
-        /* line 517, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 523, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .project .details .btn {
           display: block;
           margin: 10px auto;
           z-index: 5; }
-    /* line 525, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 531, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .left .project {
       margin-left: -5px; }
-      /* line 527, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 533, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .left .project:nth-child(1) {
         width: 80%; }
         @media (max-width: 767px) {
-          /* line 527, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 533, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .work .showcase .left .project:nth-child(1) {
             width: 100%; } }
-      /* line 533, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 539, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .left .project:nth-child(2) {
         width: 90%; }
         @media (max-width: 767px) {
-          /* line 533, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 539, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .work .showcase .left .project:nth-child(2) {
             width: 100%; } }
-      /* line 539, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 545, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .left .project:nth-child(3) {
         width: 80%; }
         @media (max-width: 767px) {
-          /* line 539, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 545, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .work .showcase .left .project:nth-child(3) {
             width: 100%; } }
-      /* line 545, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 551, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .work .showcase .left .project:nth-child(4) {
         width: 70%; }
         @media (max-width: 767px) {
-          /* line 545, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 551, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .work .showcase .left .project:nth-child(4) {
             width: 100%; } }
-    /* line 555, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 561, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .right .project:nth-child(1) {
       width: 90%;
       margin-top: 40px; }
       @media (max-width: 767px) {
-        /* line 555, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 561, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .right .project:nth-child(1) {
           width: 100%; } }
-    /* line 562, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 568, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .right .project:nth-child(2) {
       width: 95%; }
       @media (max-width: 767px) {
-        /* line 562, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 568, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .right .project:nth-child(2) {
           width: 100%; } }
-    /* line 568, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 574, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .right .project:nth-child(3) {
       width: 80%; }
       @media (max-width: 767px) {
-        /* line 568, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 574, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .right .project:nth-child(3) {
           width: 100%; } }
-    /* line 574, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 580, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .work .showcase .right .project:nth-child(4) {
       width: 75%; }
       @media (max-width: 767px) {
-        /* line 574, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 580, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .work .showcase .right .project:nth-child(4) {
           width: 100%; } }
 
-/* line 585, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 591, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .header-bg {
-  position: absolute;
-  min-height: 900px;
+  position: relative;
+  height: 450px;
   top: 0px;
   left: 0px;
-  height: 100%;
   width: 100%;
   background: url("../img/bg.jpg") no-repeat center center fixed #39CBD1;
   background-position: top;
   background-size: cover;
-  font-family: "Bree Serif", serif; }
-  /* line 596, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  font-family: "Bree Serif", serif;
+  overflow: hidden; }
+  /* line 604, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .header-bg:before {
     content: '';
     top: 0px;
     left: 0px;
     height: 100%;
     width: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8); }
-  /* line 605, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    position: absolute; }
+  /* line 613, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .header-bg .header {
     position: relative;
     height: auto;
     top: 0px;
     left: 0px;
-    width: 100%; }
-    /* line 611, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    width: 100%;
+    color: #FFF; }
+    /* line 620, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .app-logo {
       width: 100%;
       max-width: 200px;
       margin: 30px auto; }
       @media (max-width: 767px) {
-        /* line 611, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 620, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .app-logo {
           margin: 0px auto; } }
-    /* line 619, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 628, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .btn-yo {
       margin-top: 20px; }
-    /* line 622, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 631, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .title {
       font-size: 30px;
       text-align: right;
       padding-bottom: 5px;
       margin: 30px auto; }
       @media (max-width: 767px) {
-        /* line 622, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 631, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .title {
           text-align: left;
           margin-bottom: 50px; } }
-    /* line 633, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 642, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .titles h1 {
       background: #099BA1;
       display: inline-block;
@@ -763,13 +768,13 @@ body {
       margin: 0px;
       margin-top: 60px; }
       @media (max-width: 767px) {
-        /* line 633, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 642, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .titles h1 {
           margin-top: 10px; } }
-    /* line 646, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 655, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .titles h1.dl {
       font-size: 50px; }
-    /* line 649, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 658, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .titles h4 {
       background: #00878d;
       margin: 0px;
@@ -777,257 +782,265 @@ body {
       font-family: "Bree Serif", serif;
       padding: 10px 20px;
       color: #FFF; }
-    /* line 658, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 667, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .header-bg .header .stats {
       margin: 20px auto; }
       @media (max-width: 767px) {
-        /* line 658, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 667, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .stats {
           margin: 20px auto; } }
-      /* line 663, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 672, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .header-bg .header .stats .a-stat {
         text-align: center; }
-        /* line 667, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 676, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .stats .a-stat h1,
         .header-bg .header .stats .a-stat h4,
         .header-bg .header .stats .a-stat h6 {
           margin: 0px;
           padding: 0px;
           font-family: "Bree Serif", serif; }
-        /* line 672, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 681, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .header-bg .header .stats .a-stat .fa {
           padding: 10px 0px;
           color: #099ba1; }
           @media (max-width: 767px) {
-            /* line 672, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+            /* line 681, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
             .header-bg .header .stats .a-stat .fa {
               color: #099ba1; } }
         @media (max-width: 767px) {
-          /* line 679, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 688, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .header-bg .header .stats .a-stat h4 {
             color: #099ba1; } }
 
-/* line 690, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-.project {
-  margin-top: 800px; }
-  /* line 693, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .btn-back {
-    margin-top: 5px;
-    padding: 20px; }
-  @media (max-width: 767px) {
-    /* line 697, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container {
-      margin-top: -50px; } }
-  /* line 701, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .qw {
-    padding-top: 10px;
-    border-radius: 3px; }
-    /* line 706, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container .qw .title {
-      text-align: right;
-      margin-top: 0px;
-      padding-top: 20px;
-      color: #FFF; }
-      @media (max-width: 767px) {
-        /* line 706, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-        .project .container .qw .title {
-          color: #31C3C9;
-          text-align: left; } }
-    /* line 716, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container .qw .main {
-      margin-top: 20px; }
-  /* line 720, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .sec {
-    margin-bottom: 30px; }
-    /* line 726, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container .sec .para {
-      padding: 0px; }
-    /* line 729, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container .sec .side {
-      font-family: "Dosis", sans-serif;
-      text-align: right;
-      font-weight: bold;
-      border-right: 2px solid #31C3C9; }
-      @media (max-width: 767px) {
-        /* line 729, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-        .project .container .sec .side {
-          text-align: left;
-          border-left: 2px solid #31C3C9;
-          border-right: 0px; } }
-  /* line 745, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .pb,
-  .project .container .solu,
-  .project .container .dts {
-    color: #777; }
-    /* line 747, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .container .pb span,
-    .project .container .solu span,
-    .project .container .dts span {
-      font-weight: bold; }
-  /* line 752, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .pb span {
-    color: #9a2929; }
-  /* line 756, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .solu span {
-    color: #369849; }
-  /* line 759, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .container .dts span {
-    color: #23527C; }
-  /* line 764, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .uxui {
-    padding: 30px;
-    background: #31C3C9;
-    font-family: "Dosis", sans-serif;
-    color: #FFF; }
-  /* line 770, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .design {
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px dashed #ccc; }
-    /* line 774, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .design .side {
-      padding: 30px;
-      text-align: right; }
-      /* line 777, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-      .project .design .side h3 {
-        font-family: "Dosis", sans-serif;
-        color: #777;
-        font-weight: bold; }
-      /* line 783, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-      .project .design .side .colors .cbox {
-        display: inline-block;
-        border: 1px solid #c4c0c0;
-        padding: 0px;
-        margin-top: 10px; }
-        /* line 788, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-        .project .design .side .colors .cbox .box {
-          height: 81px;
-          width: 81px; }
-        /* line 792, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-        .project .design .side .colors .cbox span {
-          padding: 0px 10px; }
-      /* line 797, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-      .project .design .side .title {
-        color: #444; }
-      /* line 800, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-      .project .design .side .app-type {
-        font-family: "Bree Serif", serif;
-        color: #444; }
-        /* line 803, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-        .project .design .side .app-type h1 {
-          font-size: 25px; }
-    /* line 809, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .design .platforms span {
-      padding: 5px 10px;
-      font-family: "Bree Serif", serif;
-      border-radius: 2px;
-      display: inline-block;
-      margin-top: 2px;
-      border: 1px solid #31C3C9; }
-  /* line 819, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .worked-with {
-    margin-top: 30px;
-    font-family: "Bree Serif", serif; }
-    /* line 822, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .worked-with img {
-      max-height: 60px;
-      display: inline-block; }
-    /* line 826, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .worked-with > div {
-      display: inline-block;
-      transform: translateY(10px); }
-    /* line 831, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .worked-with h4,
-    .project .worked-with h6 {
-      padding: 2px;
-      margin: 0px; }
-  /* line 836, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-  .project .new-project {
-    padding: 100px 0px;
-    font-family: "Dosis", sans-serif; }
-    /* line 839, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .new-project div[class*='col-xs'] > div {
-      background: #31C3C9;
-      color: #FFF;
-      padding: 20px 20px; }
-    /* line 844, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .new-project .pagination {
-      text-align: center;
-      padding: 5px 20px;
-      border-radius: 0px;
-      color: #31C3C9 !important;
-      font-weight: bold;
-      font-family: "Josefin Slab", serif;
-      border: 1px solid #31C3C9;
-      background: transparent !important; }
-    /* line 855, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .project .new-project .design-img img {
-      margin-bottom: 10px; }
+/* line 700, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .btn-back {
+  margin-top: 5px;
+  padding: 20px; }
 
-/* line 862, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+@media (max-width: 767px) {
+  /* line 704, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container {
+    margin-top: -50px; } }
+
+/* line 708, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .qw {
+  padding-top: 10px;
+  border-radius: 3px; }
+  /* line 713, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container .qw .title {
+    text-align: right;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: #FFF; }
+    @media (max-width: 767px) {
+      /* line 713, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      .project .container .qw .title {
+        color: #31C3C9;
+        text-align: left; } }
+  /* line 723, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container .qw .main {
+    margin-top: 20px; }
+
+/* line 727, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .sec {
+  margin-bottom: 30px; }
+  /* line 733, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container .sec .para {
+    padding: 0px; }
+  /* line 736, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container .sec .side {
+    font-family: "Dosis", sans-serif;
+    text-align: right;
+    font-weight: bold;
+    border-right: 2px solid #31C3C9; }
+    @media (max-width: 767px) {
+      /* line 736, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      .project .container .sec .side {
+        text-align: left;
+        border-left: 2px solid #31C3C9;
+        border-right: 0px; } }
+
+/* line 752, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .pb,
+.project .container .solu,
+.project .container .dts {
+  color: #777; }
+  /* line 754, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .container .pb span,
+  .project .container .solu span,
+  .project .container .dts span {
+    font-weight: bold; }
+
+/* line 759, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .pb span {
+  color: #9a2929; }
+
+/* line 763, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .solu span {
+  color: #369849; }
+
+/* line 766, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .container .dts span {
+  color: #23527C; }
+
+/* line 771, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .uxui {
+  padding: 30px;
+  background: #31C3C9;
+  font-family: "Dosis", sans-serif;
+  color: #FFF; }
+
+/* line 777, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .design {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px dashed #ccc; }
+  /* line 781, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .design .side {
+    padding: 30px;
+    text-align: right; }
+    /* line 784, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    .project .design .side h3 {
+      font-family: "Dosis", sans-serif;
+      color: #777;
+      font-weight: bold; }
+    /* line 790, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    .project .design .side .colors .cbox {
+      display: inline-block;
+      border: 1px solid #c4c0c0;
+      padding: 0px;
+      margin-top: 10px; }
+      /* line 795, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      .project .design .side .colors .cbox .box {
+        height: 81px;
+        width: 81px; }
+      /* line 799, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      .project .design .side .colors .cbox span {
+        padding: 0px 10px; }
+    /* line 804, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    .project .design .side .title {
+      color: #444; }
+    /* line 807, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    .project .design .side .app-type {
+      font-family: "Bree Serif", serif;
+      color: #444; }
+      /* line 810, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      .project .design .side .app-type h1 {
+        font-size: 25px; }
+  /* line 816, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .design .platforms span {
+    padding: 5px 10px;
+    font-family: "Bree Serif", serif;
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 2px;
+    border: 1px solid #31C3C9; }
+
+/* line 826, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .worked-with {
+  margin-top: 30px;
+  font-family: "Bree Serif", serif; }
+  /* line 829, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .worked-with img {
+    max-height: 60px;
+    display: inline-block; }
+  /* line 833, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .worked-with > div {
+    display: inline-block;
+    transform: translateY(10px); }
+  /* line 838, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .worked-with h4,
+  .project .worked-with h6 {
+    padding: 2px;
+    margin: 0px; }
+
+/* line 843, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.project .new-project {
+  padding: 100px 0px;
+  font-family: "Dosis", sans-serif; }
+  /* line 846, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .new-project div[class*='col-xs'] > div {
+    background: #31C3C9;
+    color: #FFF;
+    padding: 20px 20px; }
+  /* line 851, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .new-project .pagination {
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 0px;
+    color: #31C3C9 !important;
+    font-weight: bold;
+    font-family: "Josefin Slab", serif;
+    border: 1px solid #31C3C9;
+    background: transparent !important; }
+  /* line 862, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .project .new-project .design-img img {
+    margin-bottom: 10px; }
+
+/* line 869, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .wrapper {
   height: 100%;
   overflow: hidden; }
   @media (min-width: 1200px) {
-    /* line 862, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 869, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper {
       padding-top: 60px; } }
   @media (max-width: 767px) {
-    /* line 862, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 869, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper {
       padding: 20px;
       margin-top: 20px; } }
-  /* line 873, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 880, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper > .row {
     max-width: 700px;
     margin: 0px auto;
     color: #ffffff; }
-  /* line 880, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 887, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .hello > div {
     height: 200px; }
     @media (max-width: 767px) {
-      /* line 880, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 887, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .wrapper .hello > div {
         height: auto; } }
-  /* line 886, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 893, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .hello > div:nth-child(2) {
     background: #31C3C9;
     transform: translate(0px, 55px); }
     @media (max-width: 767px) {
-      /* line 886, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 893, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .wrapper .hello > div:nth-child(2) {
         transform: none; } }
-    /* line 892, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 899, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .hello > div:nth-child(2) > div {
       padding: 20px;
       z-index: 10;
       text-align: right; }
-      /* line 896, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 903, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .wrapper .hello > div:nth-child(2) > div h3 {
         display: inline-block;
         font-family: "Dosis", sans-serif;
         font-size: 40px; }
         @media (max-width: 767px) {
-          /* line 896, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+          /* line 903, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
           .wrapper .hello > div:nth-child(2) > div h3 {
             font-size: 25px;
             padding: 10px; } }
-  /* line 907, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 914, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .hello > div:nth-child(3) {
     position: relative; }
-    /* line 909, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 916, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .hello > div:nth-child(3) .meri-photo {
       margin-left: -15px;
       margin-top: 55px; }
       @media (max-width: 767px) {
-        /* line 909, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 916, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .wrapper .hello > div:nth-child(3) .meri-photo {
           transform: translate(-15px, 22px);
           transform: scale(1);
           margin-left: -15px;
           height: 200px;
           width: 175px !important; } }
-    /* line 923, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 930, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .hello > div:nth-child(3) .pp {
       position: absolute;
       top: -270px;
@@ -1037,47 +1050,56 @@ body {
       text-shadow: 2px 2px 0px #00696f;
       animation: rotate-particales-2 160s infinite linear;
       transform-origin: center; }
-  /* line 936, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 943, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .me div:nth-child(1) {
     padding: 10px;
     text-align: right;
     background: #13a5ab; }
-    /* line 941, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 948, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .me div:nth-child(1) h1,
     .wrapper .me div:nth-child(1) h5 {
       font-family: "Dosis", sans-serif; }
       @media (max-width: 767px) {
-        /* line 941, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 948, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .wrapper .me div:nth-child(1) h1,
         .wrapper .me div:nth-child(1) h5 {
           font-size: 25px;
           padding: 10px; } }
-  /* line 951, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 958, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  .wrapper .pp {
+    position: absolute;
+    top: 0px;
+    transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
+    z-index: -1;
+    text-shadow: 2px 2px 0px #00696f;
+    animation: rotate-particales 150s infinite linear;
+    transform-origin: center; }
+  /* line 970, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .do > div:nth-child(2) {
     background: #099ba1;
     padding: 35px;
     font-size: 25px;
     text-align: center; }
     @media (max-width: 767px) {
-      /* line 951, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 970, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .wrapper .do > div:nth-child(2) {
         min-height: auto;
         padding: 15px; } }
-    /* line 960, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 979, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) .icon {
       font-size: 85px; }
       @media (max-width: 767px) {
-        /* line 960, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+        /* line 979, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
         .wrapper .do > div:nth-child(2) .icon {
           font-size: 50px; } }
-    /* line 966, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 985, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) svg {
       width: 100%;
       display: none; }
-    /* line 972, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 991, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) svg.show {
       display: block !important; }
-    /* line 977, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 996, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) .icon path {
       fill: transparent;
       stroke: #FFF;
@@ -1086,54 +1108,45 @@ body {
       stroke-dasharray: 1700px;
       stroke-dashoffset: -1700px;
       box-shadow: 3px 3px 0px #969696; }
-    /* line 986, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1005, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) .icon svg.draw path {
       stroke-dashoffset: 0px;
       fill: #FFF;
       transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s; }
-    /* line 993, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
-    .wrapper .do > div:nth-child(2) .pp {
-      position: absolute;
-      top: 0px;
-      transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
-      z-index: -1;
-      text-shadow: 2px 2px 0px #00696f;
-      animation: rotate-particales 150s infinite linear;
-      transform-origin: center; }
-    /* line 1003, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1013, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do > div:nth-child(2) .icon:before {
       animation: icon-chnages 3s infinite linear; }
-  /* line 1007, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1017, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .do .take {
     text-align: center;
     padding: 20px; }
-    /* line 1010, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1020, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do .take button {
       color: #31C3C9; }
-  /* line 1014, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1024, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .do .profiles {
     text-align: center;
     padding: 20px;
     margin-top: 20px; }
-    /* line 1018, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1028, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .do .profiles a {
       padding: 10px;
       margin: 0px 10px;
       color: #6a6a6a; }
-      /* line 1024, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 1034, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .wrapper .do .profiles a:hover {
         color: dodgerblue; }
   @media (max-width: 767px) {
-    /* line 1032, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1042, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .contact {
       padding: 15px; } }
-  /* line 1036, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1046, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact .container .row {
     max-width: 700px; }
-  /* line 1039, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1049, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact .valid {
     color: #13a5ab !important; }
-  /* line 1046, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1056, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact div[id*='step'] input[type='email'],
   .wrapper .contact div[id*='step'] input[type='text'] {
     background: transparent;
@@ -1143,19 +1156,19 @@ body {
     font-family: "Josefin Slab", serif;
     color: #b51919;
     font-weight: bold; }
-    /* line 1055, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1065, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .contact div[id*='step'] input[type='email']::-webkit-input-placeholder,
     .wrapper .contact div[id*='step'] input[type='text']::-webkit-input-placeholder {
       font-family: "Josefin Slab", serif;
       color: #146fc1;
       font-weight: normal; }
-    /* line 1061, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1071, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .contact div[id*='step'] input[type='email']:active,
     .wrapper .contact div[id*='step'] input[type='email']:focus,
     .wrapper .contact div[id*='step'] input[type='text']:active,
     .wrapper .contact div[id*='step'] input[type='text']:focus {
       outline: none; }
-  /* line 1066, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1076, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact .bol-bhai {
     display: inline-block;
     border: none;
@@ -1176,22 +1189,22 @@ body {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-    /* line 1086, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1096, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .contact .bol-bhai::-webkit-input-placeholder {
       font-family: "Josefin Slab", serif;
       color: #656565; }
-  /* line 1091, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1101, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact label.cc {
     font-family: "Dosis", sans-serif;
     color: #13a5ab;
     display: block;
     font-size: 18px;
     margin-top: 20px; }
-    /* line 1097, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1107, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .wrapper .contact label.cc span {
       color: #969696;
       padding-left: 10px; }
-  /* line 1102, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1112, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .wrapper .contact span.cc {
     font-family: "Josefin Slab", serif;
     font-size: 25px; }
@@ -1199,7 +1212,7 @@ body {
 /* -------------------------------- 
 svg cover layer
 -------------------------------- */
-/* line 1114, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 1124, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .cd-svg-cover {
   position: absolute;
   z-index: 1;
@@ -1209,11 +1222,11 @@ svg cover layer
   width: 100%;
   opacity: 0; }
 
-/* line 1124, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 1134, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .cd-svg-cover path {
   fill: #ffe8c9; }
 
-/* line 1128, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 1138, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .cd-svg-cover.is-animating {
   z-index: 4;
   opacity: 1;
@@ -1221,30 +1234,48 @@ svg cover layer
   -moz-transition: opacity 0.6s;
   transition: opacity 0.6s; }
 
-/* line 1136, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+/* line 1146, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
 .whatIam {
   background: #3bcdd3;
   padding: 20px;
   font-family: "Dosis", sans-serif; }
-  /* line 1142, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1152, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .whatIam h1,
   .whatIam h3 {
     font-family: "Dosis", sans-serif; }
     @media (max-width: 767px) {
-      /* line 1142, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 1152, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .whatIam h1,
       .whatIam h3 {
         margin: 0px; } }
   @media (max-width: 767px) {
-    /* line 1148, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+    /* line 1158, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
     .whatIam h3 {
       font-size: 15px; } }
-  /* line 1153, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+  /* line 1163, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
   .whatIam #typed {
     font-family: "Bree Serif", serif; }
     @media (max-width: 767px) {
-      /* line 1153, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+      /* line 1163, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
       .whatIam #typed {
         font-size: 20px; } }
+
+/* line 1173, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+#helloBox,
+.me div.col-sm-8 {
+  overflow: hidden;
+  white-space: nowrap; }
+
+/* line 1181, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.pp {
+  display: none; }
+
+/* line 1186, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/style.scss */
+.dashline {
+  border-top: 2px dashed #ccc;
+  width: 100%;
+  height: 2px;
+  max-width: 700px;
+  margin-bottom: 100px; }
 
 /*# sourceMappingURL=style.css.map */
