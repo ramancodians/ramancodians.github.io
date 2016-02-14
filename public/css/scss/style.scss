@@ -19,7 +19,7 @@ $ani-sidebar: 0.5s;
     top: 0px;
     left: 0px;
     z-index: 100;
-    background: red;
+    background: $base-color;
     text-align: center;
     .holder {
         position: relative;
@@ -27,9 +27,13 @@ $ani-sidebar: 0.5s;
         transform: translateY(-50%);
         height: 200px;
         width: 200px;
-        background: blue;
-        color: #FFF;
+        background: #FFF;
+        color: #101010;
+        border-radius: 50%;
         margin: 0px auto;
+        font-size: 100ppx;
+        padding: 80px 30px;
+         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 }
 

@@ -23,7 +23,7 @@
         <div class="row me">
             <div class="col-sm-8">
                 <div>
-                    <h1>I'm Raman Choudhary</h1>
+                    <h1 id="myName">I'm Raman Choudhary</h1>
                 </div>
             </div>
             <div class="col-xs-4">
@@ -268,7 +268,7 @@
 
             <div class="col-xs-7 whatIam">
                 <div>
-                    <h3>A young</h3>
+                    <h3 id="aYoung">A young</h3>
                     <h1><span id="typed" ng-click="breakIt = false">Front-End Developer</span></h1>
                 </div>
             </div>
@@ -340,20 +340,9 @@
     
     $(function () {
         $("#typed").typed({
-            strings: ["^1000Full Stack Designer^500.^500.^500.", "Innovator^500.^500.^500.", "Blogger^500.^500.^500.", "Explorer^500.^500.^500.!"],
+            strings: ["^1000Full Stack Designer^500.^500.^500."],
             typeSpeed: 2,
-            loop: true
+            loop: 0
         });
-
-        
-
-        $('.meri-photo').mouseenter(function () {
-            $('.meri-photo').attr('ng-src', 'img/me-side.png');
-        });
-        $('.meri-photo').mouseleave(function () {
-            $('.meri-photo').attr('ng-src', 'img/me.png');
-        });
-
-
     });
 </script>

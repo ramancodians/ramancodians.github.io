@@ -132,8 +132,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         var time = 0;
         $scope.draw = false;
 
-        //icon stack
-        $scope.iconStack = [1, 0, 0, 0];
+    
         
         var iconStack = $('.icon');        
         var iconAnimation = new TimelineMax({repeat: -1});
@@ -141,7 +140,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         console.log("Animation strated");
        
      
-             iconAnimation.to(".icon svg#code",.5,{className:"+=show"},1.5);
+             iconAnimation.to(".icon svg#code",.5,{className:"+=show"});
       
         iconAnimation.to(".icon svg#code",3,{className:"+=draw"});
         iconAnimation.to(".icon svg#code",1,{className:"-=draw"});
@@ -163,13 +162,19 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         iconAnimation.to(".icon svg#explorer",0,{className:"-=show"});
         
         var homeAnimation = new TimelineLite();
-        var times = 1;
+        var times = .8;
        
-        homeAnimation.from('#helloBox',1*times,{width:20,transformOrigin: "right",left: 300,autoAlpha:0});
+        homeAnimation.from('#helloBox',1*times,{width:20,transformOrigin: "right",left: 300,autoAlpha:0},.5);
+       
         homeAnimation.from('.me div.col-sm-8',1*times,{width:0,left: 400,autoAlpha:0});
-        homeAnimation.from('.do .whatIam',.5*times,{width:0,autoAlpha:0});
+        homeAnimation.from('.me h1#myName',.3*times,{autoAlpha:0,x:30},'-=.2');
+         homeAnimation.from('.hello .meri-photo',1*times,{transitionOrigin:"left bottom",x:-30,autoAlpha:0});
+        homeAnimation.from('.do .whatIam',1*times,{width:0,autoAlpha:0});
+        homeAnimation.from('.do .whatIam #aYoung',.3*times,{x:30,autoAlpha:0},'-=.2');
+        //homeAnimation.from('.do .whatIam #typed',.4*times,{x:30,autoAlpha:0},'-=.3');
+        
         homeAnimation.from('.do .col-xs-3',1*times,{width:0,autoAlpha:0},'-=.8');
-          homeAnimation.from('.hello .meri-photo',1*times,{autoAlpha:0,transitionOrigin:"left bottom"});  
+            
         
         
          homeAnimation.from('.pp',.5,{autoAlpha:0,rotate:50});
