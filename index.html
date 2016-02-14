@@ -11,7 +11,7 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="bower_components/animate.css/animate.css" rel="stylesheet">
-
+    <link href="public/js/lib/wow.js">
 
     <link href="public/css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,7 +23,7 @@
     <!--      Jquery-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="public/js/lib/greensock/TimelineLite.min.js"></script>
-   
+
 
 
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,900|Dosis:400,600' rel='stylesheet' type='text/css'>
@@ -42,20 +42,20 @@
 
 <body ng-app="batman" ng-controller="MainCtrl">
 
-    <div class="loader" ng-hide="loaded">
+    <div class="loader">
         <div class="holder">
             Content is Loading bitch!
         </div>
     </div>
 
-   
 
-          <span class="sidebar-btn" ng-click="isOpen = !isOpen">
+
+    <span class="sidebar-btn" ng-click="isOpen = !isOpen">
             <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
             <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
       </span>
-        
-  
+
+
 
 
     <span class="sidebar-btn" ng-click="isOpen = !isOpen">
@@ -72,12 +72,11 @@
                </h5>
 
             <h1 class="qqqq animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">"
-            Design is not just what it looks like and feels like. 
-            Design is how it works."
+            {{quotes.quote}}"
             </h1>
 
             <h5 class="by animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">
-            - Steve Jobs
+            - {{quotes.author}}
             </h5>
         </div>
 
@@ -85,15 +84,16 @@
         <div class="bg-menu2" ng-class="{'dropIn2':isOpen, 'dropOut2':!isOpen}"></div>
         <div class="bg-menu" ng-class="{'dropIn1':isOpen, 'dropOut1':!isOpen}"></div>
         <div class="side-menu">
-            
-        
-            
+
+
+
             <ul>
-                <li><h5>Menu</h5></li>
-                <li  ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
+                <li>
+                    <h5>Menu</h5></li>
+                <li ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
                 </li>
             </ul>
-<!--
+            <!--
             <div class="social">
                 <a href="http://" target="_blank">
                     <i class="fa fa-github"></i>
@@ -127,7 +127,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
-  
+    <script>
+        $(window).load(function () {
+            $('.loader').fadeOut();
+            new WOW().init();
+        });
+    </script>
 
 </body>
 

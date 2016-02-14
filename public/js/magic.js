@@ -65,7 +65,16 @@ app.config(['$routeProvider',
             });
   }]);
 
-app.controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope,$http) {
+    
+    //load the quote.json
+     $http.get('public/js/quotes.json')
+       .then(function(res){
+         
+         var n = Math.floor((Math.random() * 5) + 1);
+          console.log(n);
+          $scope.quotes = res.data[n];              
+        });
 
     //side menu data
     $scope.sideMenu = [
@@ -195,7 +204,7 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
     $('body').scrollTop(0);
     
     //project stagger
-    TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+   // TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
     
 
     
