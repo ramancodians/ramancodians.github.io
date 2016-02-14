@@ -1,6 +1,6 @@
 {
     "path": {
-        "public/css/scss/style.scss": {
+        "public/css/scss/*.scss": {
             "sass.enabled": true,
             "sass.options": {
                 "outputDir": "../",

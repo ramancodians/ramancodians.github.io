@@ -28,11 +28,11 @@ $ani-sidebar: 0.5s;
         height: 200px;
         width: 200px;
         background: #FFF;
-        color: #101010;
+        color: $base-color;
         border-radius: 50%;
         margin: 0px auto;
-        font-size: 100ppx;
-        padding: 80px 30px;
+        font-size: 30px;
+        padding: 40px;
          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 }
@@ -113,6 +113,13 @@ body {
     overflow-x: hidden;
     background: #f3f4f5;
     // background: #0080ff;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.2)), color-stop(43%, rgba(255,255,255,0.54)), color-stop(100%, rgba(230,230,230,1))); /* safari4+,chrome */
+background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* opera 11.10+ */
+background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* ie10+ */
+background:radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#E6E6E6',GradientType=0 ); /* ie6-9 */
 }
 
 .view {
@@ -145,7 +152,8 @@ body {
     transition-duration: 0.4s;
     transform: rotate(45deg);
     &:hover {
-        background: $base-color - 10;
+        background: $base-color - 20;
+       
     }
     .fa {
         position: absolute;
@@ -936,7 +944,8 @@ body {
             position: relative;
             .meri-photo {
                 //transform: translate(-105px,120px);
-                //            transform: scale(2);
+                position: relative;
+                top: 30px;
                 margin-left: -15px;
                 margin-top: 55px;
                 // width: 1000px;

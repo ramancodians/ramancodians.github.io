@@ -171,7 +171,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
          homeAnimation.from('.hello .meri-photo',1*times,{transitionOrigin:"left bottom",x:-30,autoAlpha:0});
         homeAnimation.from('.do .whatIam',1*times,{width:0,autoAlpha:0});
         homeAnimation.from('.do .whatIam #aYoung',.3*times,{x:30,autoAlpha:0},'-=.2');
-        //homeAnimation.from('.do .whatIam #typed',.4*times,{x:30,autoAlpha:0},'-=.3');
+        homeAnimation.from('.do .whatIam #typed',.4*times,{x:30,autoAlpha:0},'-=.3');
         
         homeAnimation.from('.do .col-xs-3',1*times,{width:0,autoAlpha:0},'-=.8');
             
