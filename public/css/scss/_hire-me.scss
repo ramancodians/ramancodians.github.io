@@ -1,0 +1,88 @@
+$theme-color: $base-color - 20;
+.resume {
+    
+    .title{
+        font-size: 30px;
+        padding: 20px 0px;
+        margin-top: 0px;
+    }
+    
+    .main-titles{
+        
+        .cre{
+        font-family: 'Amatic SC', cursive;
+        }
+        
+        .pas{
+            font-family: 'Six Caps', sans-serif;
+        }
+    }
+    
+    .para{
+        font-size: 17px;
+        
+        &.h3{
+            font-size: 22px;
+        }
+    }
+
+    
+    .header {
+       
+        @include desktop{
+            max-height: 650px;
+        }
+        
+        @include phone{
+            max-height: auto;
+        }
+        
+        background: #3bcdd3;
+        overflow: hidden;
+        color: #FFF;
+        img {
+            color: #FFF;
+            transform: translatey(40px)
+        }
+        
+        
+        
+    }
+    .text-lg {
+        @include desktop{
+            &:first-child{
+                margin-top: 150px;
+            }
+        }
+        
+        @include phone{
+            font-size: 60px;
+        }
+        font-size: 100px;
+        font-weight: bolder;
+        margin: 0px;
+    }
+    .row {
+        padding: 20px 0px;
+    }
+    .underline {
+        border-bottom: 2px solid $theme-color;
+        padding-bottom: 10px;
+    }
+    .skills {
+        margin-bottom: 10px;
+        span {
+            padding: 5px;
+            border: 1px solid $theme-color;
+            border-radius: 3px;
+            margin: 0px;
+            font-weight: bold;
+        }
+    }
+    
+    .exprience{
+        .col-sm-8 > div{
+            margin-bottom: 60px;
+        }
+    }
+}

@@ -60,8 +60,12 @@ app.config(['$routeProvider',
                 controller: 'ContactCtrl'
             })
             .when('/resume', {
-                templateUrl: 'public/views/contact.html',
-                controller: 'ContactCtrl'
+                templateUrl: 'public/views/resume.html',
+                controller: 'ResumeCtrl'
+            })
+            .when('/credits', {
+                templateUrl: 'public/views/creadits.html',
+                controller: 'CreditsCtrl'
             })
             .otherwise({
                 redirectTo: '/'
@@ -91,10 +95,6 @@ app.controller('MainCtrl', function ($scope, $http) {
         {
             "item": "Resume",
             "url": "resume"
-        },
-        {
-            "item": "site creadits",
-            "url": "creadits"
         },
         {
             "item": "about me",
@@ -228,9 +228,22 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
 });
 
 app.controller('ContactCtrl', function ($scope) {
+    
+    $scope.MsgSent =true;
+    
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
+    
+    $scope.sendMail = function(){
+        console.log('Mail sending');
+        
+        var MailAnimation = new TimelineLite();
+        
+        MailAnimation.to('.contact #MailBtn',1,{x:500,autoAlpha:0});
+        
+        
+    }
 });
 
 app.controller('AboutCtrl', function ($scope) {

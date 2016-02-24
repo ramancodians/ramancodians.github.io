@@ -1,26 +1,29 @@
 <section>
     <div class="contact" ng-controller="ContactCtrl">
         <div class="container">
+            <a href="#/about" class="btn btn-back"><i class="fa fa-arrow-left"></i>  &nbsp; Go back</a>
             <div class="row">
-                <form name="contactForm">
-                    <a href="#/about" class="btn btn-back"><i class="fa fa-arrow-left"></i>  &nbsp; Go back</a>
+               <div ng-show="MsgSent">
+                   <h1 class="title text-center">
+                   <i class="fa fa-check-circle"></i> 
+                       Message sent successfully!
+                   </h1>
+                   <h4> I'll be reaching you ASAP! </h4>
+               </div>
+               
+                <form name="contactForm" ng-hide="MsgSent">
                     <div>
                         <h1 class="title">Contact Me</h1>
                         <label class="cc">MESSAGE <span>Feed me</span></label>
                         <div id="step1">
-                            <textarea placeholder="Drop me a line, send a joke or just test the form script. It's your turn to make some content." class="bol-bhai" ng-model="msg">
-
-
+                            <textarea placeholder="Drop me a message or send a joke. It's your turn to make content." class="bol-bhai" ng-model="msg">
                             </textarea>
-
                         </div>
                     </div>
-
                     <div class="row animated fadeInUp" ng-show="msg.length > 0">
                         <div class="col-xs-12">
                             <div>
-
-                                <label class="cc">NAME & EMAIL <span>and who the f**k are you?</span> </label>
+                                <label class="cc">NAME & EMAIL <span>and who  are you?</span> </label>
 
                                 <div id="step2">
                                     <span class="cc" ng-hide="senderName.length > 0">I would like to know </span>
@@ -35,13 +38,11 @@
                                 </div>
                             </div>
                             <a href="#/contact" class="animated fadeInUp" ng-show="contactForm.$valid">
-                                <button class="btn btn-yo">
+                                <button class="btn btn-yo" ng-click="sendMail()" id="MailBtn">
                                     Send a Mail
                                 </button>
                             </a>
-
                         </div>
-
                     </div>
                 </form>
             </div>
