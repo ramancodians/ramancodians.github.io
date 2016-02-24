@@ -8,6 +8,7 @@ $font-para: 'Josefin Slab',
 serif;
 //$base-color: #002431;
 $base-color: #31C3C9;
+//$base-color: #e80c0c;
 
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
@@ -119,18 +120,7 @@ $ani-sidebar: 0.5s;
     margin: 0px auto;
 }
 
-body {
-    overflow-x: hidden;
-    background: #f3f4f5;
-    // background: #0080ff;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* ff3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.2)), color-stop(43%, rgba(255,255,255,0.54)), color-stop(100%, rgba(230,230,230,1))); /* safari4+,chrome */
-background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* safari5.1+,chrome10+ */
-background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* opera 11.10+ */
-background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* ie10+ */
-background:radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.54) 43%, rgba(230,230,230,1) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#E6E6E6',GradientType=0 ); /* ie6-9 */
-}
+
 
 .view {
     max-width: 1200px;
@@ -616,14 +606,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', end
     padding-top: 70px;
     left: 0px;
     z-index: 1;
-    //height: 100%;
     width: 100%;
     background:#39CBD1;
     background-position: top;
     background-size: cover;
     font-family: $font-coder;
     padding-top: 150px;
-    overflow: hidden;
+   
     
     .btn-back{
        position: absolute;
@@ -790,6 +779,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', end
                 border: 1px solid $base-color;
             }
         }
+            
+            .share-group button{
+               margin-bottom: 10px;
+                min-width: 180px;
+            }
     }
         
         .qw {
@@ -889,7 +883,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', end
         }
         
         a{
-            color: #FFF !imporant;
+            color: white;
         }
         
         .pagination {
@@ -1108,6 +1102,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', end
             }
         }
     }
+}
 
 .contact {
     @include tablet {
@@ -1185,7 +1180,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', end
     }
 }
     
-}
+
 
 /* -------------------------------- 
 svg cover layer
