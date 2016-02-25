@@ -2,7 +2,6 @@
 
 var app = angular.module('batman', ['ngRoute', 'ngAnimate']);
 
-
 app.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
@@ -60,13 +59,20 @@ app.config(['$routeProvider',
                 templateUrl: 'public/views/contact.html',
                 controller: 'ContactCtrl'
             })
+            .when('/resume', {
+                templateUrl: 'public/views/resume.html',
+                controller: 'ResumeCtrl'
+            })
+            .when('/credits', {
+                templateUrl: 'public/views/creadits.html',
+                controller: 'CreditsCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
   }]);
 
 app.controller('MainCtrl', function ($scope, $http) {
-
     //load the quote.json
     $http.get('public/js/quotes.json')
         .then(function (res) {
@@ -87,16 +93,12 @@ app.controller('MainCtrl', function ($scope, $http) {
             "url": "projects"
         },
         {
+            "item": "Resume",
+            "url": "resume"
+        },
+        {
             "item": "about me",
             "url": "about"
-        },
-        {
-            "item": "blog",
-            "url": "blog"
-        },
-        {
-            "item": "site creadits",
-            "url": "creadits"
         },
         {
             "item": "contact me",
@@ -108,8 +110,6 @@ app.controller('MainCtrl', function ($scope, $http) {
 
     $scope.isOpen = false;
     $scope.loaded = false;
-    $scope.test = 'Supper';
-    console.log("Working bitch");
 
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
@@ -123,6 +123,7 @@ app.controller('MainCtrl', function ($scope, $http) {
 app.controller('WorkCtrl', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
+        console.log('loaded projects')
     });
 });
 
@@ -131,8 +132,6 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         $scope.loaded = true;
         var time = 0;
         $scope.draw = false;
-
-
 
         var iconStack = $('.icon');
         var iconAnimation = new TimelineMax({
@@ -196,72 +195,55 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         });
 
         var homeAnimation = new TimelineLite();
-        var times = .8;
 
-        homeAnimation.from('#helloBox', 1 * times, {
-            width: 20,
-            transformOrigin: "right",
-            left: 300,
-            autoAlpha: 0
+        homeAnimation.from('#helloBox', 0.6, {
+            className: '+=animated rollIn'
         }, .5);
 
-        homeAnimation.from('.me div.col-sm-8', 1 * times, {
-            width: 0,
-            left: 400,
-            autoAlpha: 0
+        homeAnimation.from('.me div.col-sm-8', 0.1, {
+            className: '+=animated rollIn'
         });
-        homeAnimation.from('.me h1#myName', .3 * times, {
+
+        homeAnimation.from('.hello .meri-photo', 0.1, {
+            className: '+=animated slideInRight'
+        });
+        homeAnimation.from('.do .col-xs-3', 0.1, {
+            className: '+=animated slideInUp'
+        });
+
+        homeAnimation.from('.whatIam', 0.1, {
+            className: '+=animated slideInRight'
+        });
+
+        homeAnimation.staggerFrom(".profiles .fa", 0.5, {
             autoAlpha: 0,
-            x: 30
-        }, '-=.2');
-        homeAnimation.from('.hello .meri-photo', 1 * times, {
-            transitionOrigin: "left bottom",
-            x: -30,
-            autoAlpha: 0
-        });
-        homeAnimation.from('.do .whatIam', 1 * times, {
-            width: 0,
-            autoAlpha: 0
-        });
-        homeAnimation.from('.do .whatIam #aYoung', .3 * times, {
-            x: 30,
-            autoAlpha: 0
-        }, '-=.2');
-        homeAnimation.from('.do .whatIam #typed', .4 * times, {
-            x: 30,
-            autoAlpha: 0
-        }, '-=.3');
-
-        homeAnimation.from('.do .col-xs-3', 1 * times, {
-            width: 0,
-            autoAlpha: 0
-        }, '-=.8');
-        homeAnimation.from('.pp', .5, {
-            autoAlpha: 0,
-            rotate: 50
-        });
-        homeAnimation.staggerFrom(".profiles .fa", 1, {
-            scale: 0.5,
-            opacity: 0,
-            delay: 0.5,
-            ease: Elastic.easeOut,
-            force3D: true
-        }, 0.2);
-
-        homeAnimation.from('.take', .5, {
-            autoAlpha: 0,
-            y: -50
-        });
-
-
+            x: -100
+        }, 0.2, 1);
+//        homeAnimation.from(".take", 0.5, {
+//            autoAlpha: 0,
+//            y: 100
+//        });
 
     });
 });
 
 app.controller('ContactCtrl', function ($scope) {
+    
+    $scope.MsgSent =true;
+    
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
+    
+    $scope.sendMail = function(){
+        console.log('Mail sending');
+        
+        var MailAnimation = new TimelineLite();
+        
+        MailAnimation.to('.contact #MailBtn',1,{x:500,autoAlpha:0});
+        
+        
+    }
 });
 
 app.controller('AboutCtrl', function ($scope) {
@@ -274,41 +256,41 @@ app.controller('AboutCtrl', function ($scope) {
 //**********************************
 //Project Controller
 //**********************************
-app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
+app.controller('ProjectCtrl', function ($scope, $routeParams, $location, $rootScope) {
     $scope.projectList = ['bunky', 'prayas', 'christcode', 'naturalcrown', 'howhigh', 'connecto', 'studyalley', 'u25'];
 
     $('body').scrollTop(0);
 
-    //project stagger
-    // TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
-
-        var ProjectAnimation = new TimelineLite();
-    var times = .5;
-    ProjectAnimation.from('.project .header-bg', .5 * times, {
-        height: 0,
-        autoAlpha: 0
-    });
-    ProjectAnimation.from('.project .header-bg .titles h1', .5 * times, {   
-        width: 0,
-        autoAlpha: 0
-    });
-     ProjectAnimation.from('.project .header-bg .titles h4', .5 * times, {   
-        width: 0,
-        autoAlpha: 0
-    });
-    ProjectAnimation.from('.project .header-bg .btn-yo', .2 * times, {
-        y: -30,
-        autoAlpha: 0
-    });
-    ProjectAnimation.staggerFrom('.project .header-bg .a-stat', 1 * times, {
-        x: -30,
-        autoAlpha: 0
-    }, .2);
-    ProjectAnimation.from('.project .header-bg #headerImg', .5, {
-        y: 100,
-        autoAlpha: 0
-    });
- 
+    // animate just once, or till page refreshes!! 
+    if (!$rootScope.projectAnimationDone) {
+        var ProjectStackAnimation = new TimelineLite();
+        ProjectStackAnimation.from('work .title', 1, {
+            x: -100,
+            autoAlpha: 0
+        });
+        ProjectStackAnimation.from('.work .line', 0.4, {
+            width: 0
+        });
+        ProjectStackAnimation.from('.work .para', 1, {
+            autoAlpha: 0,
+            x: -100
+        });
+        ProjectStackAnimation.staggerFrom(".work .showcase .project", 3, {
+            y: 100,
+            opacity: 0,
+            ease: Elastic.easeOut,
+            force3D: true
+        }, 0.1);
+        ProjectStackAnimation.from('.work .next .kr', 0.4, {
+            x: -100,
+            autoAlpha: 0
+        }, 5);
+        ProjectStackAnimation.from('.work .next .btn-yo', 0.4, {
+            x: 100,
+            autoAlpha: 0
+        }, 4.5);
+        $rootScope.projectAnimationDone = true;
+    }
 
     $scope.getPreviousProject = function () {
         var currentLocation = $location.$$path.substring(10, $location.$$path.length);
@@ -332,8 +314,8 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
 //**********************************
 //Credit Controller
 //**********************************
-app.controller('CreditsCtrl', function ($scope, $routeParams, $location) {
+app.controller('ShowcaseCtrl', function ($scope, $routeParams, $location) {
 
-    console.log("credit page launched!");
+
 
 });

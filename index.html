@@ -6,7 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Raman Choudhary | I Work in Pixles & Code</title>
+    <title>Raman Choudhary | Full Stack Designer</title>
+    <!-- Search engines -->
+    <meta name="description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
+    <!-- Google Plus -->
+    <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+    <!-- html itemscope itemtype="http://schema.org/{CONTENT_TYPE}" -->
+    <meta itemprop="name" content="Raman Choudhary | Full Stack Designer">
+    <meta itemprop="description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
+    <meta itemprop="image" content="public/img/me.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
+    <meta name="twitter:site" content="http://raman.ch">
+    <meta name="twitter:title" content="Raman Choudhary | Full Stack Designer">
+    <meta name="twitter:description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
+    <meta name="twitter:creator" content="@ramancodians">
+    <meta name="twitter:image:src" content="/public/img/me.png">
+    <meta name="twitter:player" content="">
+    <!-- Open Graph General (Facebook & Pinterest) -->
+    <meta property="og:url" content="http://raman.ch">
+    <meta property="og:title" content="Raman Choudhary | Full Stack Designer">
+    <meta property="og:description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
+    <meta property="og:site_name" content="Raman Choudhary | Full Stack Designer">
+    <meta property="og:image" content="public/img/me.png">
+    <meta property="og:type" content="Website">
+    <meta property="og:locale" content="en_UK">
+    <meta property="og:video" content="">
+    <!-- Open Graph Article (Facebook & Pinterest) -->
+    <meta property="article:author" content="">
+    <meta property="article:section" content="">
+    <meta property="article:tag" content="">
+    <meta property="article:published_time" content="">
+    <meta property="article:modified_time" content="">
+    <meta property="article:expiration_time" content="">
+
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -23,11 +56,9 @@
     <!--      Jquery-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="public/js/lib/greensock/TimelineLite.min.js"></script>
-
-
-
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,900|Dosis:400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Amatic+SC:700|Six+Caps' rel='stylesheet' type='text/css'>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
 
@@ -44,7 +75,7 @@
 
     <div class="loader">
         <div class="holder">
-           <i class="fa fa-circle-o-notch fa-4x fa-spin"></i>
+            <i class="fa fa-circle-o-notch fa-4x fa-spin"></i>
         </div>
     </div>
 
@@ -54,10 +85,6 @@
             <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
             <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
       </span>
-
-
-
-
     <span class="sidebar-btn" ng-click="isOpen = !isOpen">
             <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
             <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
@@ -92,6 +119,8 @@
                     <h5>Menu</h5></li>
                 <li ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
                 </li>
+                
+                
             </ul>
             <!--
             <div class="social">
