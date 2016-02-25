@@ -1,6 +1,7 @@
 /* line 2, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
 .header {
   min-height: 450px;
+<<<<<<< HEAD
   background: #d6d6d6;
   overflow: hidden; }
   /* line 6, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
@@ -8,11 +9,25 @@
     transform: translatey(40px); }
 
 /* line 11, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
+=======
+  background: #3bcdd3;
+  overflow: hidden;
+  color: #FFF; }
+  /* line 9, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
+  .header img {
+    transform: translatey(40px); }
+
+/* line 15, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
+>>>>>>> e69cb09aa00d79933213176cc4700355148ab6a3
 .text-lg {
   font-size: 100px;
   font-weight: bolder; }
 
+<<<<<<< HEAD
 /* line 16, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
+=======
+/* line 20, C:/xampp/htdocs/ramancodians.github.io/public/css/scss/hire-me.scss */
+>>>>>>> e69cb09aa00d79933213176cc4700355148ab6a3
 .row {
   padding: 20px 0px; }
 

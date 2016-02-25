@@ -36,7 +36,7 @@ app.config(['$routeProvider',
                 controller: 'ProjectCtrl'
             })
             .when('/projects/naturalcrown', {
-                templateUrl: 'views/projects/naturalcrown.html',
+                templateUrl: 'public/views/projects/naturalcrown.html',
                 controller: 'ProjectCtrl'
             })
             .when('/projects/howhigh', {
@@ -65,15 +65,15 @@ app.config(['$routeProvider',
             });
   }]);
 
-app.controller('MainCtrl', function ($scope,$http) {
-    
+app.controller('MainCtrl', function ($scope, $http) {
+
     //load the quote.json
-     $http.get('public/js/quotes.json')
-       .then(function(res){
-         
-         var n = Math.floor((Math.random() * 5) + 1);
-          console.log(n);
-          $scope.quotes = res.data[n];              
+    $http.get('public/js/quotes.json')
+        .then(function (res) {
+
+            var n = Math.floor((Math.random() * 5) + 1);
+            console.log(n);
+            $scope.quotes = res.data[n];
         });
 
     //side menu data
@@ -114,8 +114,8 @@ app.controller('MainCtrl', function ($scope,$http) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
-    
-    $scope.sideMenuToggle = function(){
+
+    $scope.sideMenuToggle = function () {
         $scope.isOpen = !$scope.isOpen;
     }
 });
@@ -132,57 +132,129 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         var time = 0;
         $scope.draw = false;
 
-    
-        
-        var iconStack = $('.icon');        
-        var iconAnimation = new TimelineMax({repeat: -1});
+
+
+        var iconStack = $('.icon');
+        var iconAnimation = new TimelineMax({
+            repeat: -1
+        });
         var firstTime = true;
         console.log("Animation strated");
-       
-     
-             iconAnimation.to(".icon svg#code",.5,{className:"+=show"});
-      
-        iconAnimation.to(".icon svg#code",3,{className:"+=draw"});
-        iconAnimation.to(".icon svg#code",1,{className:"-=draw"});
-        iconAnimation.to(".icon svg#code",0,{className:"-=show"});
-        
-        iconAnimation.to(".icon svg#bulb",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#bulb",2.4,{className:"+=draw"});
-        iconAnimation.to(".icon svg#bulb",0.5,{className:"-=draw"});
-        iconAnimation.to(".icon svg#bulb",0,{className:"-=show"});
-        
-        iconAnimation.to(".icon svg#blog",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#blog",2,{className:"+=draw"});
-        iconAnimation.to(".icon svg#blog",1,{className:"-=draw"});
-        iconAnimation.to(".icon svg#blog",0,{className:"-=show"});
-        
-        iconAnimation.to(".icon svg#explorer",0,{className:"+=show"});
-        iconAnimation.to(".icon svg#explorer",2,{className:"+=draw"});
-        iconAnimation.to(".icon svg#explorer",1,{className:"-=draw"});
-        iconAnimation.to(".icon svg#explorer",0,{className:"-=show"});
-        
+
+
+        iconAnimation.to(".icon svg#code", .5, {
+            className: "+=show"
+        });
+
+        iconAnimation.to(".icon svg#code", 3, {
+            className: "+=draw"
+        });
+        iconAnimation.to(".icon svg#code", 1, {
+            className: "-=draw"
+        });
+        iconAnimation.to(".icon svg#code", 0, {
+            className: "-=show"
+        });
+
+        iconAnimation.to(".icon svg#bulb", 0, {
+            className: "+=show"
+        });
+        iconAnimation.to(".icon svg#bulb", 2.4, {
+            className: "+=draw"
+        });
+        iconAnimation.to(".icon svg#bulb", 0.5, {
+            className: "-=draw"
+        });
+        iconAnimation.to(".icon svg#bulb", 0, {
+            className: "-=show"
+        });
+
+        iconAnimation.to(".icon svg#blog", 0, {
+            className: "+=show"
+        });
+        iconAnimation.to(".icon svg#blog", 2, {
+            className: "+=draw"
+        });
+        iconAnimation.to(".icon svg#blog", 1, {
+            className: "-=draw"
+        });
+        iconAnimation.to(".icon svg#blog", 0, {
+            className: "-=show"
+        });
+
+        iconAnimation.to(".icon svg#explorer", 0, {
+            className: "+=show"
+        });
+        iconAnimation.to(".icon svg#explorer", 2, {
+            className: "+=draw"
+        });
+        iconAnimation.to(".icon svg#explorer", 1, {
+            className: "-=draw"
+        });
+        iconAnimation.to(".icon svg#explorer", 0, {
+            className: "-=show"
+        });
+
         var homeAnimation = new TimelineLite();
         var times = .8;
-       
-        homeAnimation.from('#helloBox',1*times,{width:20,transformOrigin: "right",left: 300,autoAlpha:0},.5);
-       
-        homeAnimation.from('.me div.col-sm-8',1*times,{width:0,left: 400,autoAlpha:0});
-        homeAnimation.from('.me h1#myName',.3*times,{autoAlpha:0,x:30},'-=.2');
-         homeAnimation.from('.hello .meri-photo',1*times,{transitionOrigin:"left bottom",x:-30,autoAlpha:0});
-        homeAnimation.from('.do .whatIam',1*times,{width:0,autoAlpha:0});
-        homeAnimation.from('.do .whatIam #aYoung',.3*times,{x:30,autoAlpha:0},'-=.2');
-        homeAnimation.from('.do .whatIam #typed',.4*times,{x:30,autoAlpha:0},'-=.3');
-        
-        homeAnimation.from('.do .col-xs-3',1*times,{width:0,autoAlpha:0},'-=.8');
-            
-        
-        
-         homeAnimation.from('.pp',.5,{autoAlpha:0,rotate:50});
-         homeAnimation.from('.take',.5,{autoAlpha:0,y:-50});
-      
-        
-        
-        
+
+        homeAnimation.from('#helloBox', 1 * times, {
+            width: 20,
+            transformOrigin: "right",
+            left: 300,
+            autoAlpha: 0
+        }, .5);
+
+        homeAnimation.from('.me div.col-sm-8', 1 * times, {
+            width: 0,
+            left: 400,
+            autoAlpha: 0
+        });
+        homeAnimation.from('.me h1#myName', .3 * times, {
+            autoAlpha: 0,
+            x: 30
+        }, '-=.2');
+        homeAnimation.from('.hello .meri-photo', 1 * times, {
+            transitionOrigin: "left bottom",
+            x: -30,
+            autoAlpha: 0
+        });
+        homeAnimation.from('.do .whatIam', 1 * times, {
+            width: 0,
+            autoAlpha: 0
+        });
+        homeAnimation.from('.do .whatIam #aYoung', .3 * times, {
+            x: 30,
+            autoAlpha: 0
+        }, '-=.2');
+        homeAnimation.from('.do .whatIam #typed', .4 * times, {
+            x: 30,
+            autoAlpha: 0
+        }, '-=.3');
+
+        homeAnimation.from('.do .col-xs-3', 1 * times, {
+            width: 0,
+            autoAlpha: 0
+        }, '-=.8');
+        homeAnimation.from('.pp', .5, {
+            autoAlpha: 0,
+            rotate: 50
+        });
+        homeAnimation.staggerFrom(".profiles .fa", 1, {
+            scale: 0.5,
+            opacity: 0,
+            delay: 0.5,
+            ease: Elastic.easeOut,
+            force3D: true
+        }, 0.2);
+
+        homeAnimation.from('.take', .5, {
+            autoAlpha: 0,
+            y: -50
+        });
+
+
+
     });
 });
 
@@ -192,12 +264,11 @@ app.controller('ContactCtrl', function ($scope) {
     });
 });
 
-
 app.controller('AboutCtrl', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
-     $('body').scrollTop(0);
+    $('body').scrollTop(0);
 });
 
 //**********************************
@@ -207,12 +278,37 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location) {
     $scope.projectList = ['bunky', 'prayas', 'christcode', 'naturalcrown', 'howhigh', 'connecto', 'studyalley', 'u25'];
 
     $('body').scrollTop(0);
-    
-    //project stagger
-   // TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
-    
 
-    
+    //project stagger
+    // TweenMax.staggerFrom(".showcase .project", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+
+        var ProjectAnimation = new TimelineLite();
+    var times = .5;
+    ProjectAnimation.from('.project .header-bg', .5 * times, {
+        height: 0,
+        autoAlpha: 0
+    });
+    ProjectAnimation.from('.project .header-bg .titles h1', .5 * times, {   
+        width: 0,
+        autoAlpha: 0
+    });
+     ProjectAnimation.from('.project .header-bg .titles h4', .5 * times, {   
+        width: 0,
+        autoAlpha: 0
+    });
+    ProjectAnimation.from('.project .header-bg .btn-yo', .2 * times, {
+        y: -30,
+        autoAlpha: 0
+    });
+    ProjectAnimation.staggerFrom('.project .header-bg .a-stat', 1 * times, {
+        x: -30,
+        autoAlpha: 0
+    }, .2);
+    ProjectAnimation.from('.project .header-bg #headerImg', .5, {
+        y: 100,
+        autoAlpha: 0
+    });
+ 
 
     $scope.getPreviousProject = function () {
         var currentLocation = $location.$$path.substring(10, $location.$$path.length);
