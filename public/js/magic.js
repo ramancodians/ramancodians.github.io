@@ -229,7 +229,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
 
 app.controller('ContactCtrl', function ($scope) {
     
-    $scope.MsgSent =true;
+    $scope.MsgSent =false;
     
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
