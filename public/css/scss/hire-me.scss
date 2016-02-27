@@ -1,0 +1,41 @@
+$theme-color : #2d8070;
+.header {
+    min-height: 450px;
+    background:#3bcdd3;
+    overflow: hidden;
+<<<<<<< HEAD
+    img {
+=======
+        color: #FFF;
+
+      
+    img{
+>>>>>>> e69cb09aa00d79933213176cc4700355148ab6a3
+        transform: translatey(40px)
+    }
+}
+
+.text-lg {
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.row {
+    padding: 20px 0px;
+}
+
+.underline {
+    border-bottom: 2px solid $theme-color;
+    padding-bottom: 10px;
+}
+
+.skills {
+    margin-bottom: 10px;
+    span {
+        padding: 5px;
+        border: 1px solid $theme-color;
+        border-radius: 3px;
+        margin: 0px;
+        font-weight: bold;
+    }
+}

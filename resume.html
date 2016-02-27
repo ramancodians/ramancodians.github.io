@@ -1,35 +1,67 @@
-<div class="resume" ng-controller="ResumeCtrl">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Resume</title>
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/animate.css/animate.css" rel="stylesheet">
+    <link href="public/css/hire-me.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--      Jquery-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="public/js/lib/greensock/TimelineLite.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display:400,900|Dosis:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- Angular -->
+    <script src="public/bower_components/angular/angular.min.js"></script>
+    <script src="public/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="public/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="public/js/magic.js"></script>
+
+</head>
+
+<body>
+
     <div class="header">
         <div class="container">
-            <a href="#/projects" class="btn btn-back"><i class="fa fa-arrow-left"></i> <span class="hidden-xs">Go Back</span></a>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="main-titles">
-                        <h1 class="text-lg cre">Creative,</h1>
-                        <h1 class="text-lg pas">Passionate,</h1>
-                        <h1 class="text-lg"><span class="exp">&Explorer.</span></h1>
+                    <div>
+
+                        <h1 class="text-lg">Creative.</h1>
+                        <h1 class="text-lg">Passionate.</h1>
+                        <h1 class="text-lg">EXPLORER</h1>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div>
-                        <img src="public/img/people/me-formal.png" alt="Raman Choudhary" class="img-responsive meri-photo">
+                        <img src="public/img/hire-me/me.png" alt="Raman Choudhary" class="img-responsive meri-photo">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="main para">
+    <div class="main">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
                     <div class="div">
-                        <h1 class="title underline">Career Goal</h1>
-                        <h3 class="para h3">
-                         I intend to build my career with a company driven by for what they do. Want to work with other committed and dedicated people which will help me to explore  myself fully and realize my potential thereby accomplishing my 
-individual goals along with the goals of the organization 
-and also have a continual growth on my learning and 
-knowledge curve.
+                        <h1 class="underline">Career Goal</h1>
+                        <h3>
+                          Intend to build my career with a leading corporate and work with other committed and dedicated people, which will help me to explore myself fully and realize my potential thereby accomplishing my individual goals along with the goals of the organization and also have continual growth on my learning and knowledge curve.
                       </h3>
                     </div>
                 </div>
@@ -43,7 +75,7 @@ knowledge curve.
             <div class="row">
                 <div class="col-sm-8">
                     <div>
-                        <h1 class="title underline">
+                        <h1 class="underline">
                           Education
                       </h1>
 
@@ -53,8 +85,7 @@ knowledge curve.
                                 <p><b>10th CBSE</b> : 8.0 CGPA</p>
                                 <p>(Graduated on 2011 with First class) </p>
                                 <p><b>Dehi Public School</b>, Jaipur, Rajasthan.</p>
-                                <div class="line base"></div>
-                                </br>
+
                                 <p><b>12th CBSE</b> : 73%</p>
                                 <p><i>Commerce Student</i> </p>
                                 <p>(Graduated on 2013 with First Class)</p>
@@ -79,7 +110,7 @@ knowledge curve.
 
             <div class="row">
                 <div class="col-sm-8">
-                    <h1 class="title underline">
+                    <h1 class="underline">
                     Extra-Curricular
                 </h1>
                     <ul>
@@ -89,22 +120,19 @@ knowledge curve.
                 </div>
             </div>
 
-            <div class="row exprience">
+            <div class="row">
                 <div class="col-sm-8">
-                    <h1 class="title underline">Exprience</h1>
+                    <h1 class="underline">Exprience</h1>
                     <div>
-                        <h3><strong>What Can I Give <span class="pull pull-right">Aug’12-Jan’13</span></strong></h3>
+                        <h3>What Can I Give <span class="pull pull-right">Aug’12-Jan’13</span></h3>
                         <h4>Graphic Designer</h4>
                         <ul>
                             <li>In May 2012, Dr. A.P.J Abdul Kalam launched a program for the youth of India called the What Can I Give Movement, with a central theme of defeating corruption.</li>
                             <li>The movement strived to replace the attitude of greed and corruption that comes from the thought, "what can I take" with an attitude eponymous with the initiative.</li>
                         </ul>
                     </div>
-
-
-
                     <div>
-                        <h3><strong>Codians Inc. <span class="pull pull-right">Aug’13-Dec’15</span></strong></h3>
+                        <h3>Codians Inc. <span class="pull pull-right">Aug’13-Dec’15</span></h3>
                         <h4>Founder/Front-end Developer</h4>
                         <ul>
                             <li>Founded in College in 2013 with 5 memebers to build diverse range of projects. </li>
@@ -118,7 +146,7 @@ knowledge curve.
 
             <div class="row">
                 <div class="col-sm-8">
-                    <h1 class="title underline">Technical Skills</h1>
+                    <h1 class="underline">Technical Skills</h1>
 
                     <p><strong>Languages</strong></p>
                     <div class="skills">
@@ -127,7 +155,6 @@ knowledge curve.
                         <span><i class="fa fa-css3"></i> CSS/SASS</span>
                         <span><i class="fa fa-php"></i> PHP</span>
                         <span><i class="fa fa-code"></i> Basic C++ & Java</span>
-                         <span>...</span>
                     </div>
                     <p><strong>Frameworks</strong></p>
                     <div class="skills">
@@ -135,7 +162,6 @@ knowledge curve.
                         <span><i class="fa fa"></i> jQuery</span>
                         <span><i class="fa fa"></i> Polymer</span>
                         <span><i class="fa fa"></i> TweenMax</span>
-                        <span>...</span>
                     </div>
                     <p><strong>Tools</strong></p>
                     <div class="skills">
@@ -143,43 +169,36 @@ knowledge curve.
                         <span>Illustrator</span>
                         <span>Brackets</span>
                         <span>Git</span>
-                         <span>...</span>
                     </div>
                     <p><strong>Technologies</strong></p>
                     <div class="skills">
                         <span>PhoneGap/Cordova</span>
                         <span>SVG</span>
                         <span>Web Components</span>
-                         <span>...</span>
                     </div>
 
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col-sm-8">
-                    <h1 class="title underline">Interpersonal Skills</h1>
-
+                    <h1 class="underline">Interpersonal Skills</h1>
+                    
                     <ul>
-                        <li>Demonstrated ability to take constructive criticism in a positive manner.</li>
-                        <li>Excellent ability to adapt to changing work environments</li>
-                        <li>Encouraging attitude with a strong capability of inspiring others.</li>
-                        <li>Active listening skills targeted at handling problems and taking improvement advice.</li>
+                        <li></li>
                     </ul>
-
+                    
                 </div>
-            </div>
-        <div class="line"></div>
-            <div class="row">
-                <div class="col-sm-8 text-center">
-                    <button class="btn btn-yo">
-                        Invite me for a Job Interview
-                    </button>
-                </div>
-                <div class="col-sm-4"></div>
-                
             </div>
         </div>
     </div>
 
-</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
