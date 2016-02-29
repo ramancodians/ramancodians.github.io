@@ -9,7 +9,6 @@ serif;
 //$base-color: #002431;
 $base-color: #31C3C9;
 //$base-color: #e80c0c;
-
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
 .loader {
@@ -34,20 +33,23 @@ $ani-sidebar: 0.5s;
         margin: 0px auto;
         font-size: 30px;
         padding: 40px;
-         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
 }
 
+.no-style{
+    text-decoration: none;
+    border: 0px;
+}
 
-body{
+body {
     overflow-x: hidden;
 }
 
-.btn-white{
+.btn-white {
     border-color: #FFF !important;
     color: #FFF !important;
-    
-    &:hover{
+    &:hover {
         color: #444 !important;
         border-color: $base-color - 30 !important;
     }
@@ -126,8 +128,6 @@ body{
     margin: 0px auto;
 }
 
-
-
 .view {
     max-width: 1200px;
     margin: 0px auto;
@@ -159,7 +159,6 @@ body{
     transform: rotate(45deg);
     &:hover {
         background: $base-color - 20;
-       
     }
     .fa {
         position: absolute;
@@ -392,8 +391,8 @@ body{
     }
 }
 
-.para-h{
-     max-width: 700px;
+.para-h {
+    max-width: 700px;
 }
 
 .typed-cursor {
@@ -613,22 +612,18 @@ body{
     left: 0px;
     z-index: 1;
     width: 100%;
-    background:#39CBD1;
+    background: #39CBD1;
     background-position: top;
     background-size: cover;
     font-family: $font-coder;
     padding-top: 150px;
-   
-    
-    .btn-back{
-       position: absolute;
+    .btn-back {
+        position: absolute;
         z-index: 9999;
         //background: red;
         top: 80px;
-        left:10px;
-        
+        left: 10px;
     }
-    
     &:before {
         content: '';
         top: 0px;
@@ -636,7 +631,7 @@ body{
         height: 100%;
         width: 100%;
         position: absolute;
-       // background: rgba(#000, 0.8);
+        // background: rgba(#000, 0.8);
     }
     .header {
         position: relative;
@@ -729,15 +724,12 @@ body{
         margin-top: 5px;
         padding: 20px;
     }
-    
-    
     .container {
         @include tablet {
             margin-top: -50px;
         }
     }
-        
-        .design {
+    .design {
         padding-top: 30px;
         margin-top: 30px;
         border-top: 1px dashed #ccc;
@@ -785,83 +777,79 @@ body{
                 border: 1px solid $base-color;
             }
         }
-            
-            .share-group button{
-               margin-bottom: 10px;
-                min-width: 180px;
-            }
+        .share-group button {
+            margin-bottom: 10px;
+            min-width: 180px;
+        }
     }
-        
-        .qw {
-            padding-top: 10px;
-            border-radius: 3px;
-            // box-shadow: 0px 1px 1px 2px rgba(#000,0.05);
-            //    border: 1px solid #e1e1e1;
-            .title {
-                text-align: right;
-                margin-top: 0px;
-                padding-top: 20px;
-                color: #FFF;
-                @include tablet {
-                    color: $base-color;
-                    text-align: left;
-                }
-            }
-            .main {
-                margin-top: 20px;
+    .qw {
+        padding-top: 10px;
+        border-radius: 3px;
+        // box-shadow: 0px 1px 1px 2px rgba(#000,0.05);
+        //    border: 1px solid #e1e1e1;
+        .title {
+            text-align: right;
+            margin-top: 0px;
+            padding-top: 20px;
+            color: #FFF;
+            @include tablet {
+                color: $base-color;
+                text-align: left;
             }
         }
-        .sec {
-            margin-bottom: 30px;
-            &:nth-child(1) {
-                // background: red;
-                //padding-top: 120px;
-            }
-            .para {
-                padding: 0px;
-            }
-            .side {
-                font-family: $font-header;
-                text-align: right;
-                font-weight: bold;
-                border-right: 2px solid $base-color;
-                @include tablet {
-                    text-align: left;
-                    border-left: 2px solid $base-color;
-                    border-right: 0px;
-                }
-            }
+        .main {
+            margin-top: 20px;
         }
-        //=======================================
-        // problem, solution and details color
-        .pb,
-        .solu,
-        .dts {
-            color: #777;
-            span {
-                font-weight: bold;
+    }
+    .sec {
+        margin-bottom: 30px;
+        &:nth-child(1) {
+            // background: red;
+            //padding-top: 120px;
+        }
+        .para {
+            padding: 0px;
+        }
+        .side {
+            font-family: $font-header;
+            text-align: right;
+            font-weight: bold;
+            border-right: 2px solid $base-color;
+            @include tablet {
+                text-align: left;
+                border-left: 2px solid $base-color;
+                border-right: 0px;
             }
         }
-        .pb {
-            span {
-                color: #9a2929;
-            }
+    }
+    //=======================================
+    // problem, solution and details color
+    .pb,
+    .solu,
+    .dts {
+        color: #777;
+        span {
+            font-weight: bold;
         }
-        .solu span {
-            color: #369849;
+    }
+    .pb {
+        span {
+            color: #9a2929;
         }
-        .dts span {
-            color: #23527C;
-        }
-        //========================================
-    
+    }
+    .solu span {
+        color: #369849;
+    }
+    .dts span {
+        color: #23527C;
+    }
+    //========================================
     .uxui {
         padding: 30px;
         background: $base-color;
         font-family: $font-header;
         color: #FFF;
     }
-    
     .worked-with {
         margin-top: 30px;
         font-family: $font-coder;
@@ -887,11 +875,9 @@ body{
             color: #FFF;
             padding: 20px 20px;
         }
-        
-        a{
+        a {
             color: white;
         }
-        
         .pagination {
             text-align: center;
             padding: 5px 20px;
@@ -928,6 +914,29 @@ body{
     }
     // with .row
     .hello {
+        
+          #img-box{
+              @include phone{
+                  height: 120px;
+                  
+                  .meri-photo{
+                      top: -95px;
+                      right: 0px;
+                      
+                  }
+              }
+              
+               @include tablet{
+                  height: 120px;
+                  
+                  .meri-photo{
+                      top: -95px;
+                      right: 0px;
+                      
+                  }
+              }
+            }
+        
         & > div {
             height: 200px;
             @include tablet {
@@ -940,6 +949,9 @@ body{
             @include tablet {
                 transform: none;
             }
+           
+          
+           
             & > div {
                 padding: 20px;
                 z-index: 10;
@@ -999,18 +1011,16 @@ body{
             }
         }
     }
-    
-     .pp {
-            position: absolute;
-            //background: red;
-            top: 0px;
-            transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
-            z-index: -1;
-            text-shadow: 2px 2px 0px $base-color - 90;
-            animation: rotate-particales 150s infinite linear;
-            transform-origin: center;
-        }
-    
+    .pp {
+        position: absolute;
+        //background: red;
+        top: 0px;
+        transform: rotate(150deg) scale(0.5) translate(400px, 1100px);
+        z-index: -1;
+        text-shadow: 2px 2px 0px $base-color - 90;
+        animation: rotate-particales 150s infinite linear;
+        transform-origin: center;
+    }
     .do {
         & > div:nth-child(2) {
             background: $base-color - 40;
@@ -1031,19 +1041,16 @@ body{
                 width: 100%;
                 display: none;
             }
-            
-           
-            svg.show{
-                 display: block!important;
-               // background: red;
+            svg.show {
+                display: block!important;
+                // background: red;
             }
-          
             .icon path {
                 fill: transparent;
                 stroke: #FFF;
                 stroke-width: 10px;
                 transition: stroke-dashoffset 0.5s linear, fill 1s ease 0.4s;
-                  stroke-dasharray: 1700px;
+                stroke-dasharray: 1700px;
                 stroke-dashoffset: -1700px;
                 box-shadow: 3px 3px 0px rgba(150, 150, 150, 1);
             }
@@ -1051,63 +1058,49 @@ body{
                 stroke-dashoffset: 0px;
                 fill: #FFF;
                 transition: stroke-dashoffset 1s linear, fill 0.4s ease 0.5s;
-            
+            }
+            .icon:before {
+                animation: icon-chnages 3s infinite linear;
+            }
         }
-      
-       
-        .icon:before {
-            animation: icon-chnages 3s infinite linear;
-        }
-    }
-    .take {
-        text-align: center;
-        padding: 20px;
-        button {
-            color: $base-color;
+        .take {
+            text-align: center;
+            padding: 20px;
+            button {
+                color: $base-color;
+            }
         }
     }
-      
-}
-    
     .profiles {
         text-align: center;
         padding: 20px;
         margin: 20px auto;
         max-width: 700px;
-        
-        @include phone{
+        @include phone {
             padding: 0px;
             margin: 10px;
         }
-        
-        a .fa{
+        a .fa {
             padding: 10px;
             //background: red;
             margin: 0px 10px;
             //font-size: 25px;
             color: #6a6a6a;
-            
-           
             &.fa-facebook-square:hover {
                 color: #3b5998;
             }
-            
             &.fa-twitter-square:hover {
                 color: #55acee;
             }
-            
             &.fa-github:hover {
                 color: #3b5998;
             }
-            
             &.fa-instagram:hover {
                 color: #3f729b;
             }
-            
             &.fa-linkedin:hover {
                 color: #0077b5;
             }
-            
             &.fa-codepen:hover {
                 color: #242424;
             }
@@ -1125,6 +1118,8 @@ body{
     .valid {
         color: $base-color - 30 !important;
     }
+    
+   
     //steps styles
     div[id*='step'] {
         // background: red;
@@ -1190,7 +1185,6 @@ body{
         font-size: 25px;
     }
 }
-    
 
 
 /* -------------------------------- 
@@ -1219,58 +1213,55 @@ svg cover layer
     transition: opacity 0.6s;
 }
 
- .whatIam {
-            background: $base-color + 10;
-            padding: 20px;
-            font-family: $font-header;
-         min-height: 175px;
-            
-            h1,
-            h3 {
-                font-family: $font-header;
-                @include tablet {
-                    margin: 0px;
-                }
-            }
-            h3 {
-                @include tablet {
-                    font-size: 15px;
-                }
-            }
-            #typed {
-                font-family: $font-coder;
-                @include tablet {
-                    font-size: 20px;
-                }
-            }
+.whatIam {
+    background: $base-color + 10;
+    padding: 20px;
+    font-family: $font-header;
+    min-height: 175px;
+    @include phone {
+         min-height: 100px;
+    }
+    h1,
+    h3 {
+        font-family: $font-header;
+        @include tablet {
+            margin: 0px;
         }
+    }
+    h3 {
+        @include tablet {
+            font-size: 15px;
+        }
+    }
+    #typed {
+        font-family: $font-coder;
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+}
 
 //animation
 #helloBox,
 .me div.col-sm-8,
 .titles h1,
-.titles h4
-{
-   overflow: hidden;
-  
+.titles h4 {
+    overflow: hidden;
 }
 
-    
-
-.pp{
+.pp {
     display: none;
 }
 
-
-.dashline{
-   //background: red;
+.dashline {
+    //background: red;
     border-top: 2px dashed #ccc;
-        width: 100%;
+    width: 100%;
     height: 2px;
     max-width: 700px;
     margin-bottom: 100px;
 }
 
-.bg-prayas{
-    background-color:91AE42;
+.bg-prayas {
+    background-color: 91AE42;
 }

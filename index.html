@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,26 @@
     <title>Raman Choudhary | Full Stack Designer</title>
     <!-- Search engines -->
     <meta name="description" content="I’m Raman Choudhary, a young 21 year old Full Stack Designer from Bangalore">
-<meta name="keywords" content="full stack-designer, bangalore, raman choudhary, raman, raman choudhry, codians, codians inc, frontend developer, front-end developer, designer, web design bangalore">
-<meta name="author" content="Raman Choudhary">
+    <meta name="keywords" content="full stack-designer, bangalore, raman choudhary, raman, raman choudhry, codians, codians inc, frontend developer, front-end developer, designer, web design bangalore">
+    <meta name="author" content="Raman Choudhary">
     <!-- Google Plus -->
     <meta itemprop="name" content="Raman Choudhary | Full Stack Designer">
     <meta itemprop="description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
-    <meta itemprop="image" content="public/img/social.JPG">
+    <meta itemprop="image" content="public/img/social.jpg">
     <!-- Twitter -->
     <meta name="twitter:card" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
     <meta name="twitter:site" content="http://raman.ch">
     <meta name="twitter:title" content="Raman Choudhary | Full Stack Designer">
     <meta name="twitter:description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
     <meta name="twitter:creator" content="@ramancodians">
-    <meta name="twitter:image:src" content="public/img/social.JPG">
+    <meta name="twitter:image:src" content="public/img/social.jpg">
     <meta name="twitter:player" content="">
     <!-- Open Graph General (Facebook & Pinterest) -->
     <meta property="og:url" content="http://raman.ch">
     <meta property="og:title" content="Raman Choudhary | Full Stack Designer">
     <meta property="og:description" content="After learning HTML, CSS, JS and basic php in my high school, I discovered my passion is “Creating solutions with technology”. I left my city (Jaipur) in 2013 for a 3 year Computer Science Course in Christ University, Bangalore. In my final year of college I’m exploring the concepts of UI, Usability, Branding and Community-building and my favorite UX.">
     <meta property="og:site_name" content="Raman Choudhary | Full Stack Designer">
-    <meta property="og:image" content="public/img/social.JPG">
+    <meta property="og:image" content="public/img/social.jpg">
     <meta property="og:type" content="Website">
     <meta property="og:locale" content="en_UK">
     <meta property="og:video" content="">
@@ -65,11 +66,15 @@
     <script src="public/bower_components/angular/angular.min.js"></script>
     <script src="public/bower_components/angular-route/angular-route.min.js"></script>
     <script src="public/bower_components/angular-animate/angular-animate.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
     <script src="public/js/magic.js"></script>
 
 </head>
 
-<body ng-app="batman" ng-controller="MainCtrl">
+<body ng-controller="MainCtrl">
 
     <div class="loader">
         <div class="holder">
@@ -117,8 +122,8 @@
                     <h5>Menu</h5></li>
                 <li ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
                 </li>
-                
-                
+
+
             </ul>
             <!--
             <div class="social">
@@ -155,11 +160,26 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-74453251-1', 'auto');
+        ga('send', 'pageview');
+
         $(window).load(function () {
             $('.loader').fadeOut();
+            angular.bootstrap(document, ['batman']);
         });
     </script>
-
 </body>
 
 </html>

@@ -3,24 +3,25 @@
         <div class="container">
             <a href="#/about" class="btn btn-back"><i class="fa fa-arrow-left"></i>  &nbsp; Go back</a>
             <div class="row">
-               <div ng-show="MsgSent">
+               <div id="thankNote" ng-show="MsgSent">
                    <h1 class="title text-center">
-                   <i class="fa fa-check-circle"></i> 
+                   <i class="fa fa-check-circle animated bounceInTop"></i> 
                        Message sent successfully!
                    </h1>
-                   <h4> I'll be reaching you ASAP! </h4>
+                   <h4 class="animated bounceInTop"> I'll be reaching you ASAP! or mail me at <strong>raman@love.com</strong> </h4>
                </div>
                
-                <form name="contactForm" ng-hide="MsgSent">
+                <form name="contactForm" ng-hide="MsgSent" action="https://getsimpleform.com/messages?form_api_token=a5578734cceb97538e24aaec960d68d1" method="post" id="contactForm">
+                   <input type='hidden' name='redirect_to' value='http://raman.ch' />
                     <div>
                         <h1 class="title">Contact Me</h1>
                         <label class="cc">MESSAGE <span>Feed me</span></label>
                         <div id="step1">
-                            <textarea placeholder="Drop me a message or send a joke. It's your turn to make content." class="bol-bhai" ng-model="msg" autofocus>
+                            <textarea placeholder="Drop me a message or send a joke. It's your turn to make content." class="bol-bhai" ng-model="msgText" autofocus>
                             </textarea>
                         </div>
                     </div>
-                    <div class="row animated fadeInUp" ng-show="msg.length > 0">
+                    <div class="row animated fadeInUp" ng-show="msgText.length > 0">
                         <div class="col-xs-12">
                             <div>
                                 <label class="cc">NAME & EMAIL <span>and who  are you?</span> </label>

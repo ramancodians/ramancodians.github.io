@@ -1,6 +1,6 @@
 // Coded by Raman Choudhary
 
-var app = angular.module('batman', ['ngRoute', 'ngAnimate']);
+var app = angular.module('batman', ['ngRoute', 'ngAnimate', 'firebase']);
 
 app.config(['$routeProvider',
   function ($routeProvider) {
@@ -72,6 +72,15 @@ app.config(['$routeProvider',
             });
   }]);
 
+
+app.service('ContactForm', function ($firebaseObject, $scope) {
+
+    var url = 'https://raman-ch.firebaseio.com/';
+    var ref = new Firebase(url);
+    return $firebaseObject(ref);
+
+});
+
 app.controller('MainCtrl', function ($scope, $http) {
     //load the quote.json
     $http.get('public/js/quotes.json')
@@ -112,8 +121,8 @@ app.controller('MainCtrl', function ($scope, $http) {
     $scope.loaded = false;
 
     $scope.$on('$viewContentLoaded', function () {
-        $scope.loaded = true;        
-       
+        $scope.loaded = true;
+
         $("#typed").typed({
             strings: ["Full Stack Designer^500.^500."],
             typeSpeed: 2,
@@ -121,14 +130,14 @@ app.controller('MainCtrl', function ($scope, $http) {
             loopCont: 1,
             startDelay: 1
         });
-    
+
     });
 
     $scope.sideMenuToggle = function () {
         $scope.isOpen = !$scope.isOpen;
     }
-    
-    
+
+
 });
 
 app.controller('WorkCtrl', function ($scope) {
@@ -146,7 +155,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
 
         var iconStack = $('.icon');
         var iconAnimation = new TimelineMax();
-        var firstTime = true;       
+        var firstTime = true;
 
         iconAnimation.to(".icon svg#code", 1, {
             className: "+=show"
@@ -189,10 +198,13 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
     });
 });
 
-app.controller('ContactCtrl', function ($scope) {
+app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout) {
 
     $scope.MsgSent = false;
+    $scope.MailNotSent = false;
+    var ref = new Firebase("https://raman-ch.firebaseio.com");
 
+    $scope.msgs = $firebaseArray(ref);
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
@@ -200,13 +212,32 @@ app.controller('ContactCtrl', function ($scope) {
     $scope.sendMail = function () {
         console.log('Mail sending');
 
-        var MailAnimation = new TimelineLite();
+        var newMsg = {
+            "posted": new Date(),
+            "msgText": $scope.msgText,
+            "senderEmail": $scope.senderEmail,
+            "senderName": $scope.senderName
+        }
 
-        MailAnimation.to('.contact #MailBtn', 1, {
-            x: 500,
-            autoAlpha: 0
+
+        $scope.msgs.$add(newMsg).then(function () {
+            //$scope.MsgSent = true;
+            var thankingAnimation = new TimelineLite();
+            thankingAnimation.to('.contact #MailBtn', 0.8, {
+                x: 500,
+                autoAlpha: 0
+            });
+            thankingAnimation.to('.contact form#contactForm', 0.7, {
+                x: 200,
+                autoAlpha: 0
+            });
+            $scope.MsgSent = true;
+         
+           
+            
+        }).catch(function () {
+            $scope.MailNotSent = true;
         });
-
 
     }
 });
