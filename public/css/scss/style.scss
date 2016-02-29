@@ -38,6 +38,11 @@ $ani-sidebar: 0.5s;
     }
 }
 
+
+body{
+    overflow-x: hidden;
+}
+
 .btn-white{
     border-color: #FFF !important;
     color: #FFF !important;
@@ -1037,7 +1042,7 @@ $ani-sidebar: 0.5s;
                 fill: transparent;
                 stroke: #FFF;
                 stroke-width: 10px;
-                transition: stroke-dashoffset 0.5s linear, fill 0.2s ease 0.4s;
+                transition: stroke-dashoffset 0.5s linear, fill 1s ease 0.4s;
                   stroke-dasharray: 1700px;
                 stroke-dashoffset: -1700px;
                 box-shadow: 3px 3px 0px rgba(150, 150, 150, 1);
@@ -1045,7 +1050,7 @@ $ani-sidebar: 0.5s;
             .icon svg.draw path {
                 stroke-dashoffset: 0px;
                 fill: #FFF;
-                transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s;
+                transition: stroke-dashoffset 1s linear, fill 0.4s ease 0.5s;
             
         }
       
@@ -1069,6 +1074,11 @@ $ani-sidebar: 0.5s;
         padding: 20px;
         margin: 20px auto;
         max-width: 700px;
+        
+        @include phone{
+            padding: 0px;
+            margin: 10px;
+        }
         
         a .fa{
             padding: 10px;
@@ -1263,8 +1273,4 @@ svg cover layer
 
 .bg-prayas{
     background-color:91AE42;
-}
-
-.text-prayas{
-    color: red;
 }

@@ -4,7 +4,7 @@
         <div class="container main">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="title">About me</h1>
+                    <h1 class="title"><span id="typed">About me</span></h1>
                     <div class="line base"></div>
 
                     <p class="para">
@@ -84,4 +84,16 @@
             </br>
         </div>
     </div>
+    
+     <script>
+    $(function () {
+        $("#typed").typed({
+            strings: ["About me."],
+            typeSpeed: 1.5,
+            loop: false,
+            loopCont: 1
+        });
+    });
+    </script>
+    
 </section>

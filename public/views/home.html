@@ -269,12 +269,12 @@
             <div class="col-xs-7 whatIam">
                 <div>
                     <h3 id="aYoung">A young</h3>
-                    <h1><span id="typed" ng-click="breakIt = false">Front-End Developer</span></h1>
+                    <h1><span id="typed">Front-End Developer</span></h1>
                 </div>
             </div>
         </div>
-        </br>
-        <div class="row profiles">
+
+            <div class="row profiles">
             <div class="col-xs-2">
                 <div>
                     <a href="https://facebook.com/ramanchoudhry" target="_blank">
@@ -320,8 +320,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="row take text-center">
             <div class="col-xs-12">
                 <div>
@@ -340,9 +338,10 @@
     
     $(function () {
         $("#typed").typed({
-            strings: ["^1000Full Stack Designer^500.^500.^500."],
+            strings: ["^300Full Stack Designer^500.^500."],
             typeSpeed: 2,
-            loop: 0
+            loop: false,
+            loopCont: 1
         });
     });
 </script>

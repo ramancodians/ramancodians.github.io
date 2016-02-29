@@ -4,11 +4,11 @@
 
         <div class="text-left">
             <h1 class="title text-center">
-                      “Projects that I am proud of
+                      <span id="typed">Projects that I am proud of</span>
                     </h1>
             <div class="line base"></div>
 
-            <p class="para">
+            <p class="para" >
                 Here are a few projects I have worked on as a student. Most of them are experiments because as a student, I had the freedom to try new things. All of them individually represent something I really love, for I am always on-the-go for learning something new.
             </p>
 
@@ -141,4 +141,18 @@
              
         </div>
     </div>
+    
+    <script>
+    $(function () {
+        $("#typed").typed({
+            strings: [" Projects that I am proud of."],
+            typeSpeed: 1.5,
+            loop: false,
+            loopCont: 1
+        });
+    });
+    </script>
+    
 </div>
+
+

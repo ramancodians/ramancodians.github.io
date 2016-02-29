@@ -112,12 +112,23 @@ app.controller('MainCtrl', function ($scope, $http) {
     $scope.loaded = false;
 
     $scope.$on('$viewContentLoaded', function () {
-        $scope.loaded = true;
+        $scope.loaded = true;        
+       
+        $("#typed").typed({
+            strings: ["Full Stack Designer^500.^500."],
+            typeSpeed: 2,
+            loop: false,
+            loopCont: 1,
+            startDelay: 1
+        });
+    
     });
 
     $scope.sideMenuToggle = function () {
         $scope.isOpen = !$scope.isOpen;
     }
+    
+    
 });
 
 app.controller('WorkCtrl', function ($scope) {
@@ -134,64 +145,15 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
         $scope.draw = false;
 
         var iconStack = $('.icon');
-        var iconAnimation = new TimelineMax({
-            repeat: -1
-        });
-        var firstTime = true;
-        console.log("Animation strated");
+        var iconAnimation = new TimelineMax();
+        var firstTime = true;       
 
-
-        iconAnimation.to(".icon svg#code", .5, {
-            className: "+=show"
-        });
-
-        iconAnimation.to(".icon svg#code", 3, {
-            className: "+=draw"
-        });
         iconAnimation.to(".icon svg#code", 1, {
-            className: "-=draw"
-        });
-        iconAnimation.to(".icon svg#code", 0, {
-            className: "-=show"
-        });
-
-        iconAnimation.to(".icon svg#bulb", 0, {
             className: "+=show"
         });
-        iconAnimation.to(".icon svg#bulb", 2.4, {
-            className: "+=draw"
-        });
-        iconAnimation.to(".icon svg#bulb", 0.5, {
-            className: "-=draw"
-        });
-        iconAnimation.to(".icon svg#bulb", 0, {
-            className: "-=show"
-        });
 
-        iconAnimation.to(".icon svg#blog", 0, {
-            className: "+=show"
-        });
-        iconAnimation.to(".icon svg#blog", 2, {
+        iconAnimation.to(".icon svg#code", 4, {
             className: "+=draw"
-        });
-        iconAnimation.to(".icon svg#blog", 1, {
-            className: "-=draw"
-        });
-        iconAnimation.to(".icon svg#blog", 0, {
-            className: "-=show"
-        });
-
-        iconAnimation.to(".icon svg#explorer", 0, {
-            className: "+=show"
-        });
-        iconAnimation.to(".icon svg#explorer", 2, {
-            className: "+=draw"
-        });
-        iconAnimation.to(".icon svg#explorer", 1, {
-            className: "-=draw"
-        });
-        iconAnimation.to(".icon svg#explorer", 0, {
-            className: "-=show"
         });
 
         var homeAnimation = new TimelineLite();
@@ -219,30 +181,33 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
             autoAlpha: 0,
             x: -100
         }, 0.2, 1);
-//        homeAnimation.from(".take", 0.5, {
-//            autoAlpha: 0,
-//            y: 100
-//        });
+        //        homeAnimation.from(".take", 0.5, {
+        //            autoAlpha: 0,
+        //            y: 100
+        //        });
 
     });
 });
 
 app.controller('ContactCtrl', function ($scope) {
-    
-    $scope.MsgSent =false;
-    
+
+    $scope.MsgSent = false;
+
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
     });
-    
-    $scope.sendMail = function(){
+
+    $scope.sendMail = function () {
         console.log('Mail sending');
-        
+
         var MailAnimation = new TimelineLite();
-        
-        MailAnimation.to('.contact #MailBtn',1,{x:500,autoAlpha:0});
-        
-        
+
+        MailAnimation.to('.contact #MailBtn', 1, {
+            x: 500,
+            autoAlpha: 0
+        });
+
+
     }
 });
 
@@ -318,4 +283,9 @@ app.controller('ShowcaseCtrl', function ($scope, $routeParams, $location) {
 
 
 
+});
+
+
+app.controller('ResumeCtrl', function ($scope) {
+    $('body').scrollTop(0);
 });
