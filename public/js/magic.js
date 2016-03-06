@@ -64,7 +64,7 @@ app.config(['$routeProvider',
                 controller: 'ResumeCtrl'
             })
             .when('/credits', {
-                templateUrl: 'public/views/creadits.html',
+                templateUrl: 'public/views/credits.html',
                 controller: 'CreditsCtrl'
             })
             .otherwise({
@@ -112,7 +112,12 @@ app.controller('MainCtrl', function ($scope, $http) {
         {
             "item": "contact me",
             "url": "contact"
+        },
+        {
+            "item": "credits",
+            "url": "credits"
         }
+        
                       ];
 
     //view toggles
@@ -198,7 +203,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
     });
 });
 
-app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout) {
+app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout,$cordovaContacts) {
 
     $scope.MsgSent = false;
     $scope.MailNotSent = false;
