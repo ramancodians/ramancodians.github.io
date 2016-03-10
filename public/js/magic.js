@@ -112,10 +112,6 @@ app.controller('MainCtrl', function ($scope, $http) {
         {
             "item": "contact me",
             "url": "contact"
-        },
-        {
-            "item": "credits",
-            "url": "credits"
         }
         
                       ];
@@ -203,7 +199,7 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
     });
 });
 
-app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout,$cordovaContacts) {
+app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout) {
 
     $scope.MsgSent = false;
     $scope.MailNotSent = false;
@@ -216,7 +212,7 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout,$cordova
 
     $scope.sendMail = function () {
         console.log('Mail sending');
-
+ 
         var newMsg = {
             "posted": new Date(),
             "msgText": $scope.msgText,
@@ -227,18 +223,7 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout,$cordova
 
         $scope.msgs.$add(newMsg).then(function () {
             //$scope.MsgSent = true;
-            var thankingAnimation = new TimelineLite();
-            thankingAnimation.to('.contact #MailBtn', 0.8, {
-                x: 500,
-                autoAlpha: 0
-            });
-            thankingAnimation.to('.contact form#contactForm', 0.7, {
-                x: 200,
-                autoAlpha: 0
-            });
             $scope.MsgSent = true;
-         
-           
             
         }).catch(function () {
             $scope.MailNotSent = true;
