@@ -11,6 +11,15 @@ $base-color: #31C3C9;
 //$base-color: #e80c0c;
 $base-green: #9affb5;
 $ani-sidebar: 0.5s;
+
+
+*::-moz-selection { background: yellow;
+    transition-duration: 1s;
+}
+*::selection { background: yellow; 
+    transition-duration: 1s;
+}
+
 .loader {
     display: block;
     height: 100%;
@@ -37,7 +46,7 @@ $ani-sidebar: 0.5s;
     }
 }
 
-.no-style{
+.no-style {
     text-decoration: none;
     border: 0px;
 }
@@ -914,29 +923,22 @@ body {
     }
     // with .row
     .hello {
-        
-          #img-box{
-              @include phone{
-                  height: 120px;
-                  
-                  .meri-photo{
-                      top: -95px;
-                      right: 0px;
-                      
-                  }
-              }
-              
-               @include tablet{
-                  height: 120px;
-                  
-                  .meri-photo{
-                      top: -95px;
-                      right: 0px;
-                      
-                  }
-              }
+        #img-box {
+            @include phone {
+                height: 120px;
+                .meri-photo {
+                    top: -95px;
+                    right: 0px;
+                }
             }
-        
+            @include tablet {
+                height: 120px;
+                .meri-photo {
+                    top: -95px;
+                    right: 0px;
+                }
+            }
+        }
         & > div {
             height: 200px;
             @include tablet {
@@ -949,9 +951,6 @@ body {
             @include tablet {
                 transform: none;
             }
-           
-          
-           
             & > div {
                 padding: 20px;
                 z-index: 10;
@@ -1118,8 +1117,6 @@ body {
     .valid {
         color: $base-color - 30 !important;
     }
-    
-   
     //steps styles
     div[id*='step'] {
         // background: red;
@@ -1219,7 +1216,7 @@ svg cover layer
     font-family: $font-header;
     min-height: 175px;
     @include phone {
-         min-height: 100px;
+        min-height: 100px;
     }
     h1,
     h3 {
@@ -1264,4 +1261,26 @@ svg cover layer
 
 .bg-prayas {
     background-color: 91AE42;
+}
+
+.side-info {
+    width: 100%;
+    tr {
+        padding: 5px;
+        &:last-child{
+            border-bottom: 1px solid $theme-color;
+        }
+        td {
+            &:first-child{
+                font-weight: bold;
+            }
+            
+            &:last-child{
+                border-right: 1px solid $theme-color;
+            }
+            border-top: 1px solid $theme-color;
+            border-left: 1px solid $theme-color;
+            padding: 5px;
+        }
+    }
 }
