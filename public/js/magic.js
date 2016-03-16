@@ -113,7 +113,7 @@ app.controller('MainCtrl', function ($scope, $http) {
             "item": "contact me",
             "url": "contact"
         }
-        
+
                       ];
 
     //view toggles
@@ -199,35 +199,53 @@ app.controller('HomeCtrl', function ($scope, $interval, $timeout) {
     });
 });
 
-app.controller('ContactCtrl', function ($scope, $firebaseArray,$timeout) {
+app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $firebaseAuth) {
 
     $scope.MsgSent = false;
     $scope.MailNotSent = false;
     var ref = new Firebase("https://raman-ch.firebaseio.com");
+    
+    $scope.authObj = $firebaseAuth(ref);
 
-    $scope.msgs = $firebaseArray(ref);
+    //$scope.msgs = $firebaseArray(ref);
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
+        console.log("view loaded!");
+
+        $scope.authObj.$authAnonymously().then(function (authData) {
+        $scope.logged = true;
+
+        }).catch(function (error) {
+            console.error("Authentication failed:", error);
+        });
+
+
     });
 
     $scope.sendMail = function () {
-        console.log('Mail sending');
- 
-        var newMsg = {
+
+      if($scope.logged){
+          var newMsg = {
             "posted": new Date(),
             "msgText": $scope.msgText,
             "senderEmail": $scope.senderEmail,
             "senderName": $scope.senderName
         }
 
-
-        $scope.msgs.$add(newMsg).then(function () {
-            //$scope.MsgSent = true;
-            $scope.MsgSent = true;
-            
-        }).catch(function () {
-            $scope.MailNotSent = true;
-        });
+     
+          ref.child('mails').push(newMsg,function(error){
+            if(error){
+                console.log("error!!")
+                 $scope.MsgSent = true;
+            }else{
+                console.log("Saved!");
+                 $scope.MailNotSent = true;
+            }
+         });
+        
+      }else{
+        alert("Something went wrong! Try emailing me instead. raman@love.com");
+    }
 
     }
 });
