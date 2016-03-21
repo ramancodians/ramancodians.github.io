@@ -1,0 +1,533 @@
+/* line 7, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+body {
+  background: #d9d9d9;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px; }
+
+/* line 13, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+* {
+  box-sizing: border-box; }
+
+@-webkit-keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+@keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+@-webkit-keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+@keyframes rotateOutUpLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+/* line 81, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.no-pad {
+  padding-bottom: 0px; }
+
+/* line 84, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.phone {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 10px auto;
+  margin-top: 0px;
+  background: #eaeaea;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden; }
+
+/* line 96, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+top-nav {
+  width: 100%;
+  background: #e48e26;
+  display: block;
+  text-align: right;
+  color: #FFF;
+  padding: 5px;
+  z-index: 999;
+  position: relative; }
+
+/* line 108, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+header {
+  background: #F8A23A;
+  padding: 15px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  z-index: 101;
+  position: relative; }
+  /* line 115, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  header .fa {
+    color: #9e4800; }
+  /* line 118, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  header > span {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #FFF; }
+
+/* line 125, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.card {
+  background: #FFF;
+  margin: 0px 10px;
+  border-radius: 0px;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 131, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .card p {
+    padding: 10px;
+    background: #2980b9; }
+    /* line 134, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .card p img {
+      max-width: 150px;
+      margin: 0px auto;
+      display: block; }
+  /* line 140, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .card > div {
+    padding: 10px; }
+  /* line 143, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .card > h4, .card h5 {
+    margin: 0px;
+    padding: 5px 5px 5px 20px;
+    color: #555; }
+  /* line 149, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .card.ng-hide-add {
+    -webkit-animation-name: rotateOutUpLeft;
+    animation-name: rotateOutUpLeft;
+    animation-duration: 0.5s; }
+
+/* line 157, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.btn {
+  border: 0px;
+  background: transparent;
+  font-size: 18px;
+  padding: 7px; }
+  /* line 162, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .btn.btn-low {
+    color: #9d9d9d; }
+  /* line 165, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .btn.btn-success {
+    color: #236180; }
+
+/* line 170, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.pull-right {
+  float: right; }
+
+/* line 174, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.wiz {
+  padding-top: 20px;
+  margin-top: 10px;
+  animation-delay: 0.1s;
+  /*temp*/ }
+  /* line 182, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .wiz > div {
+    padding: 0px; }
+  /* line 185, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .wiz .op {
+    min-height: 120px;
+    background-size: cover;
+    color: #FFF;
+    position: relative;
+    z-index: 1; }
+    /* line 192, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .wiz .op span#title {
+      z-index: 10;
+      letter-spacing: 1px;
+      position: relative;
+      top: 50px;
+      text-transform: uppercase; }
+    /* line 201, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .wiz .op:before {
+      content: '';
+      background: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -1; }
+  /* line 215, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .wiz .user-inputs {
+    background: #e2e2e2;
+    margin-top: 10px; }
+    /* line 218, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .wiz .user-inputs .icon {
+      max-width: 80px;
+      display: block;
+      stroke: green;
+      margin: 0px auto;
+      margin-bottom: 20px; }
+
+/* line 228, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.wiz-cont.push-up {
+  transition-duration: 0.5s;
+  transition-delay: 0.9s;
+  transform: translateY(-90px); }
+
+/* line 235, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.progress-n {
+  padding: 5px;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px; }
+  /* line 240, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .progress-n .side-pro {
+    min-width: 120px;
+    height: 10px;
+    overflow: hidden; }
+    /* line 244, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .progress-n .side-pro .progress {
+      height: 100%;
+      position: relative;
+      transform: translateX(-10px);
+      top: 0px; }
+  /* line 252, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .progress-n .fa {
+    position: relative;
+    top: -10px; }
+
+/* line 257, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 6.55px 0; }
+
+/* line 262, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus {
+  outline: none; }
+
+/* line 265, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(183, 164, 164, 0.75);
+  border-radius: 6.7px;
+  border: 0px solid #483a25; }
+
+/* line 274, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.55px; }
+
+/* line 285, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-webkit-slider-runnable-track {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 288, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-moz-range-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(183, 164, 164, 0.75);
+  border-radius: 6.7px;
+  border: 0px solid #483a25; }
+
+/* line 297, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer; }
+
+/* line 306, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+/* line 314, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-fill-lower {
+  background: rgba(183, 164, 164, 0.75);
+  border: 0px solid #483a25;
+  border-radius: 13.4px;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0); }
+
+/* line 320, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-fill-upper {
+  background: rgba(183, 164, 164, 0.75);
+  border: 0px solid #483a25;
+  border-radius: 13.4px;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0); }
+
+/* line 326, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer;
+  height: 3.9px; }
+
+/* line 336, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-ms-fill-lower {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 339, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-ms-fill-upper {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 343, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 6.55px 0; }
+
+/* line 348, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus {
+  outline: none; }
+
+/* line 351, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(183, 164, 164, 0.75);
+  border-radius: 6.7px;
+  border: 0px solid #483a25; }
+
+/* line 360, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.55px; }
+
+/* line 371, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-webkit-slider-runnable-track {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 374, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-moz-range-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(183, 164, 164, 0.75);
+  border-radius: 6.7px;
+  border: 0px solid #483a25; }
+
+/* line 383, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer; }
+
+/* line 392, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+/* line 400, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-fill-lower {
+  background: rgba(183, 164, 164, 0.75);
+  border: 0px solid #483a25;
+  border-radius: 13.4px;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0); }
+
+/* line 406, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-fill-upper {
+  background: rgba(183, 164, 164, 0.75);
+  border: 0px solid #483a25;
+  border-radius: 13.4px;
+  box-shadow: 1px 1px 1px transparent, 0px 0px 1px rgba(13, 13, 13, 0); }
+
+/* line 412, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider::-ms-thumb {
+  box-shadow: 0px 0px 0px #050000, 0px 0px 0px #1f0000;
+  border: 1.2px solid rgba(63, 45, 30, 0.2);
+  height: 17px;
+  width: 24px;
+  border-radius: 50px;
+  background: rgba(61, 243, 145, 0.85);
+  cursor: pointer;
+  height: 3.9px; }
+
+/* line 422, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-ms-fill-lower {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 425, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+input[type=range].slider:focus::-ms-fill-upper {
+  background: rgba(183, 164, 164, 0.75); }
+
+/* line 429, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.padd-it {
+  padding: 20px;
+  background: #FFF; }
+
+/* line 433, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.sidenav {
+  background: #fff;
+  min-width: 280px;
+  height: 89%;
+  position: absolute;
+  top: 95px;
+  left: -280px;
+  z-index: 10;
+  overflow: hidden;
+  color: #FFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition-duration: 0.3s;
+  animation: all ease;
+  opacity: 0.2;
+  border: 2px dashed #414141; }
+  /* line 449, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .sidenav.open {
+    left: 0px;
+    opacity: 1;
+    border: 0px; }
+  /* line 455, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .sidenav .user-panel {
+    background: #414141;
+    top: -10px;
+    position: relative;
+    padding: 20px 10px; }
+    /* line 460, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+    .sidenav .user-panel img {
+      max-width: 70px;
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #FFF; }
+
+/* line 472, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.bool .op:before {
+  display: none; }
+
+/* line 476, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.bool .op {
+  min-height: auto; }
+  /* line 478, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .bool .op:first-child {
+    border-right: 1px solid #c7c7c7; }
+
+/* line 483, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.bool h1 {
+  position: relative;
+  font-weight: bold;
+  margin: 8px;
+  font-size: 30px; }
+
+/* line 490, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.bool .yes {
+  background: #ffffff;
+  color: rgba(39, 159, 188, 0.85); }
+
+/* line 495, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.bool .no {
+  background: #ffffff;
+  color: #a3a3a3; }
+
+/* line 501, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.exit-wiz {
+  padding: 20px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  max-width: 300px;
+  display: block;
+  margin: 0px auto; }
+
+/* line 512, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.finished {
+  max-width: 300px;
+  margin: 10px auto;
+  margin-top: 100px; }
+  /* line 516, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .finished img {
+    max-width: 160px;
+    display: block;
+    margin: 10px auto; }
+
+/* line 523, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 10; }
+
+/* line 538, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.atmos span {
+  padding: 6px;
+  border: 1px solid #c1c1c1;
+  margin: 3px;
+  border-radius: 3px;
+  display: inline-block; }
+  /* line 545, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+  .atmos span.selected {
+    border: 2px solid #2c7e26;
+    background: #edffeb; }
+
+/* line 552, C:/Users/Raman/Desktop/dishq design challenge/web-test/other/css/main.scss */
+.rotateOutUpLeft {
+  animation: rotateOutUpLeft 10s; }
+
+/*# sourceMappingURL=main.css.map */
