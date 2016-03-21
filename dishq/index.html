@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dishq | For love of food</title>
+
+    <link rel="stylesheet" href="other/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="other/main.css">
+    
+    <link rel="stylesheet" href="other/animate.css/animate.min.css">
+    <link rel="stylesheet" href="other/font-awesome/css/font-awesome.min.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <script src="other/angular/angular.min.js"></script>
+    <script src="other/angular-animate/angular-animate.min.js"></script>
+    <script src="other/jquery/dist/jquery.min.js"></script>
+    <script src="other/greensock/TimelineLite.min.js"></script>
+    <script src="other/app.js"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+
+<body class="phone" ng-app="dishq" ng-controller="MainCtrl">
+   
+   
+    <top-nav ng-class="{'slideOutUp':startWiz}" class="animated">
+        <i class="fa fa-wifi"></i>
+        <i class="fa fa-signal"></i>
+        <i class="fa fa-battery"></i> 10:57
+    </top-nav>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    
+    <div class="overlay" ng-show="overlay" ng-init="overlay = false" ng-click="closeEverything()">
+          <div class="card exit-wiz animated slideInUp no-pad" ng-show="popUp" ng-init="popUp = false">
+          <b> Do you really want to close this?</b>
+          <div>
+              <button class="btn btn-low" ng-click="later()">Yes</button>
+                <button class="btn btn-success pull-right" ng-click="overlay = false">CONTINUE</button>
+          </div>
+       </div>
+       
+       <div class="card finished" ng-show="finished" ng-init="finished = false">
+           <img src="img/achievement.PNG" class="img-responsive" alt="">
+          <div class="padd-it text-center">
+              <h4 class="text-success">
+                 Level Up
+              </h4>
+              <div class="user-inputs clearfix bool">
+                
+                <div class="col-xs-12 op text-center yes" style="border: 0px;">
+                    <div ng-click="next()"> 
+                   <h4><b>Yaah! Continue</b></h4>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </div>
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="sidenav" ng-class="{'open':sideToggle}">
+    <div class="user-panel text-center">
+        <img src="img/users/me.jpg" alt="" class="img-responsive img-circle">
+        <h5><b>Raman Choudhary</b></h5>
+        <div class="text-center"> 
+        <span><i class="fa fa-circle text-danger"></i> 27 | <i class="fa fa-circle text-info"></i> 8 </span>
+          </div>
+    </div>
+    </div>
+       <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    
+    <header ng-init="sideToggle = false" ng-class="{'slideOutUp':startWiz}" class="animated">
+        <i class="fa fa-bars" ng-click="openSide()"></i> <span ng-click="next()">Dishq</span>
+    </header>
+
+    <main>
+        <div class="card animated active" ng-class="{'rotateOutUpLeft':startWiz}">
+            <p>
+                <img src="img/getting-started.png" alt="Getting Started" class="fa">
+
+            </p>
+            <h4>What kind of food you like?</h4>
+            <div>
+                <button class="btn btn-low" ng-click="exitWiz()">Later</button>
+                <button class="btn btn-success pull-right" ng-click="changeSlide()">GET STARTED</button>
+            </div>
+        </div>
+    </main>
+       
+     
+        <!--
+        After Starting WiZard!
+        -->
+      <div class="wiz-cont" ng-show="startWiz" ng-class="{'push-up':startWiz}">
+            
+        <div class="progress-n">
+            Step {{(steps.indexOf(1)+1)%3}} of 3 
+                        <span class="pull-right" ng-click="exitWiz()"><i class="fa fa-remove fa-2x"></i></span>
+
+            <span class="pull-right side-pro">
+              <div class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" value="{{formComplition}}" aria-valuemin="0" aria-valuemax="100" style="width: {{formComplition}}%">
+   
+  </div>
+</div>  
+            </span>
+            
+        </div>
+        <div class="card wiz animated slideInRight" ng-show="steps[0]">
+
+            <h5> <b>Are you vegetarian or non-vegetarian?</b></h5>
+            <div class="user-inputs clearfix">
+                <div class="col-xs-6 op text-center" style="background-image:url('img/food/veg.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Vegetarian</span>
+
+                    </div>
+                </div>
+               <div class="col-xs-6 op text-center" style="background-image:url('img/food/non-veg.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Non-Vegetarian</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card wiz animated slideInRight" ng-show="steps[1]">
+
+            <h5> <b>Do you prefer Starter or Main?</b></h5>
+            <div class="user-inputs clearfix">
+                <div class="col-xs-6 op text-center" style="background-image:url('img/food/starter.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Starter</span>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 op text-center" style="background-image:url('img/food/meal.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Main</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[2]">
+
+            <h5> <b>Do you like desserts?</b></h5>
+            <div class="user-inputs clearfix bool">
+                <div class="col-xs-6 op text-center no">
+                    <div class="" ng-click="next()">
+                       <h1>No</h1>
+                    </div>
+                </div>
+                <div class="col-xs-6 op text-center yes">
+                    <div ng-click="next()"> 
+                   <h1>Yes</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[3]">
+
+            <h5> <b>When you eat out it is mostly for lunch or dinner?</b></h5>
+           <div class="user-inputs clearfix">
+                <div class="col-xs-6 op text-center" style="background-image:url('img/food/noon.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Lunch</span>
+
+                    </div>
+                </div>
+                 <div class="col-xs-6 op text-center" style="background-image:url('img/food/dinner.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Dinner</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[4]">
+
+            <h5> <b>What’s your favourite cuisine?</b></h5>
+           <div class="user-inputs clearfix">
+                <div class="col-xs-4 op text-center" ng-repeat="i in cuisines" style="background-image:url('img/food/{{i.img}}');" ng-click="next()">
+                    
+                      <span id="title">{{i.name}}</span>
+
+                    
+                </div>
+                <div class="text-center">
+                    <span class="btn">more cuisines(50+)</span>
+                </div>
+                
+                </div>
+            </div>
+            
+             <div class="card wiz animated slideInRight" ng-show="steps[5]">
+
+            <h5> <b>How spicy do you like your food?</b></h5>
+           <div class="user-inputs clearfix">
+               <div>
+               </div>
+               <div class="padd-it">
+<h3 class="text-center">                                    {{howSpicy[spiceRange]}}
+</br></br>
+</h3>                                     <input type="range" ng-model="spiceRange" value="2" max="4" min="0" ng-init="spiceRange = 2" class="slider">
+
+                   
+                   
+                   <div class="text-right">
+                       <button class="btn btn-success" ng-click="next()">NEXT</button>
+                   </div>
+               </div> 
+            </div>
+        </div>
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[6]">
+
+            <h5> <b>What is more important to you at a restaurant, great service or value for money?</b></h5>
+            <div class="user-inputs clearfix">
+                <div class="col-xs-6 op text-center" style="background-image:url('img/food/service.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Great Service</span>
+
+                    </div>
+                </div>
+               <div class="col-xs-6 op text-center" style="background-image:url('img/food/value-for-money.jpg');">
+                    <div class="" ng-click="next()">
+                        <span id="title">Value for Money</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="card wiz animated slideInRight" ng-show="steps[7]">
+
+            <h5> <b>What type of atmosphere do you prefer at restaurants? </b></h5>
+           <div class="user-inputs clearfix">
+               <div>
+               </div>
+               <div class="padd-it">
+                                <div class="hide">
+                                        <input  class="form-control" list="atmosphere" name="atmoslist">
+                                    
+                                    <datalist id="atmosphere">
+                                       <option value="Exotice">
+                                       <option value="Family">
+                                       <option value="other">
+                                       <option value="other">
+                                       <option value="other">
+                                       <option value="other">
+                                       <option value="other">
+                                        
+                                    </datalist>
+                                </div>
+                                
+                                <div class="atmos clearfix">
+                                    <span 
+                                    ng-repeat="i in atmoshere" 
+                                    ng-click="selected[$index] = !selected[$index]" 
+                                    ng-init="selected[$index] = 0" 
+                                    ng-class="{'selected': selected[$index]}">
+                                    {{i}}</span>
+                                </div>
+
+                   
+                   
+                   <div class="text-right">
+                       <button class="btn btn-success" ng-click="next()">NEXT</button>
+                   </div>
+               </div> 
+            </div>
+        </div>
+        
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[8]">
+
+            <h5> <b>Are there any foods you don’t eat or are allergic to?</b></h5>
+           <div class="user-inputs clearfix">
+               <div class="atmos clearfix padd-it">
+                                    <span 
+                                    ng-repeat="i in allergicFoods" 
+                                    ng-click="selected[$index] = !selected[$index]" 
+                                    ng-init="selected[$index] = 0" 
+                                    ng-class="{'selected': selected[$index]}">
+                                    {{i}}</span>
+                                    </br>
+          <div class="text-right">
+               <button class="btn btn-success" ng-click="next()">NEXT</button>
+          </div>                      </div>
+               
+            </div>
+        </div>
+        
+        <div class="card wiz animated slideInRight" ng-show="steps[9]">
+
+            <h5> <b>What’s your favourite dish? </b></h5>
+           <div class="user-inputs clearfix">
+               <div class="atmos clearfix padd-it">
+                                    
+                                    <input list="fevoFood" class="form-control">
+                                    <datalist id="fevoFood">
+                                        <option value="Paneer">
+                                        <option value="Dal Makani">
+                                        
+                                    </datalist>
+                                    </br>
+          <div class="text-right">
+               <button class="btn btn-success" ng-click="next()">NEXT</button>
+          </div>                      </div>
+               
+            </div>
+        </div>
+        
+         <div class="card wiz animated slideInRight" ng-show="steps[10]">
+
+            <h5> <b>What else would you like to tell us about your food preferences?</b></h5>
+           <div class="user-inputs clearfix">
+               <div class="atmos clearfix padd-it">
+                                    
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>                         
+                                    </br>
+          <div class="text-right">
+               <button class="btn btn-success" ng-click="finish()">FINISH</button>
+          </div>                      </div>
+               
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+
+
+
+
+
+
+</body>
+
+</html>
