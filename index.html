@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Raman Choudhary | Full Stack Designer</title>
     <!-- Search engines -->
@@ -41,7 +42,7 @@
     <meta property="article:modified_time" content="">
     <meta property="article:expiration_time" content="">
     
-   <meta name="fragment" content="!">
+    <meta name="fragment" content="!">
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -97,8 +98,6 @@
       </span>
 
     <div class="sidebar animated fadeIn" ng-class="{'fadeOut':!isOpen,'sidebar-open':isOpen}">
-        <!-- Background Shape for Sidemenu -->
-
         <div class="quote visible-md visible-lg ">
             <h5 class="qod animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">
                QUOTE OF THE DAY
@@ -117,47 +116,16 @@
         <div class="bg-menu2" ng-class="{'dropIn2':isOpen, 'dropOut2':!isOpen}"></div>
         <div class="bg-menu" ng-class="{'dropIn1':isOpen, 'dropOut1':!isOpen}"></div>
         <div class="side-menu">
-
-
-
             <ul>
                 <li>
                     <h5>Menu</h5></li>
                 <li ng-repeat="i in sideMenu" class="animated fadeInUp"><a href="#/{{i.url}}" ng-click="sideMenuToggle()">{{i.item}}</a>
                 </li>
-
-
             </ul>
-            <!--
-            <div class="social">
-                <a href="http://" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="http://" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="http://" target="_blank">
-                    <i class="fa fa-codepen"></i>
-                </a>
-                <a href="http://" target="_blank">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="http://" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
--->
-
-
         </div>
     </div>
-
     <section class="view" ng-view>
-
     </section>
-
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -184,5 +152,4 @@
         });
     </script>
 </body>
-
 </html>
