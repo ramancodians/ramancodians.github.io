@@ -238,8 +238,9 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $fireb
                 console.log("error!!")
                  $scope.MsgSent = true;
             }else{
-                console.log("Saved!");
-                 $scope.MailNotSent = true;
+                 console.log("Saved!");
+                 //$scope.MailNotSent = true;
+                 $scope.MsgSent = true;
             }
          });
         
