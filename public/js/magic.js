@@ -240,7 +240,7 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $fireb
             }else{
                  console.log("Saved!");
                  //$scope.MailNotSent = true;
-              alert("I got your message! We'll contact you ASAP :D");
+              alert("I got your message! I'll contact you ASAP :D");
                  $scope.MsgSent = true;
             }
          });
