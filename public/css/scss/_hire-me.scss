@@ -1,4 +1,5 @@
 $theme-color: $base-color - 20;
+
 .resume {
     
     .title{
@@ -27,6 +28,18 @@ $theme-color: $base-color - 20;
     }
 
     
+    .intro{
+        padding-bottom: 60px;
+        .row{
+            padding: 0px;
+            margin: 0px;
+            
+            p{
+                margin: 5px;
+            }
+        }
+    }
+    
     .header {
        
         @include desktop{
@@ -37,9 +50,9 @@ $theme-color: $base-color - 20;
             max-height: auto;
         }
         
-        background: #3bcdd3;
+        //background: #3bcdd3;
         overflow: hidden;
-        color: #FFF;
+        color: #3bcdd3;
         img {
             color: #FFF;
             transform: translatey(40px)
@@ -84,5 +97,17 @@ $theme-color: $base-color - 20;
         .col-sm-8 > div{
             margin-bottom: 60px;
         }
+    }
+}
+
+.download-resume{
+    padding-top: 20px;
+    button{
+        width: 100%;
+        background: $base-color;
+        border: 1px solid $base-color - 10;
+        color: #FFF;
+        padding: 10px;
+        border-radius: 3px;
     }
 }

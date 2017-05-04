@@ -1,13 +1,14 @@
 {
     "path": {
-        "other/css/*.scss": {
+        "public/css/scss/*.scss": {
             "sass.enabled": true,
             "sass.options": {
                 "outputDir": "../",
                 "includePaths": [],
                 "sourceComments": true,
                 "outputStyle": "nested"
-            }
+            },
+            "linting.collapsed": false
         }
     }
 }

@@ -29,3 +29,11 @@ $lg : 1200px;
 
     }
 }
+
+@mixin print {
+    @media print {  
+        @content; 
+
+    }
+}
+

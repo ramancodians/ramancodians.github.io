@@ -46,6 +46,8 @@ $ani-sidebar: 0.5s;
     }
 }
 
+
+
 .no-style {
     text-decoration: none;
     border: 0px;
@@ -1070,6 +1072,7 @@ body {
             }
         }
     }
+    
     .profiles {
         text-align: center;
         padding: 20px;
@@ -1282,5 +1285,11 @@ svg cover layer
             border-left: 1px solid $theme-color;
             padding: 5px;
         }
+    }
+}
+
+@media print{
+    body{
+        background: red;
     }
 }
