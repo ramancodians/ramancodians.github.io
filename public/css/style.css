@@ -293,7 +293,7 @@ body {
   /* line 56, C:/MAMP/htdocs/ramancodians.github.io/public/css/scss/_hire-me.scss */
   .resume .header img {
     color: #FFF;
-    transform: translatey(40px); }
+    transform: translatey(0px); }
 
 /* line 64, C:/MAMP/htdocs/ramancodians.github.io/public/css/scss/_hire-me.scss */
 .resume .text-lg {
@@ -303,7 +303,7 @@ body {
   @media (min-width: 1200px) {
     /* line 66, C:/MAMP/htdocs/ramancodians.github.io/public/css/scss/_hire-me.scss */
     .resume .text-lg:first-child {
-      margin-top: 150px; } }
+      margin-top: 100px; } }
   @media (max-width: 480px) {
     /* line 64, C:/MAMP/htdocs/ramancodians.github.io/public/css/scss/_hire-me.scss */
     .resume .text-lg {
