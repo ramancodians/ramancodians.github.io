@@ -24,6 +24,16 @@ header.navigation-header{
 	background: #FFF;
 	height: 80px;
 	padding: 20px 0px;
+    
+    @include tablet{
+        height: 50px;  
+        padding: 7px 0px;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+    }
 	
 	//menu
 	.hamburger-menu{
@@ -40,6 +50,11 @@ header.navigation-header{
 		font-family: $font-logo;
 		margin-left: 30px;
 		font-weight: bold;
+        
+        @include phone{
+            margin-left: 5px;
+            font-size: 20px;
+        }
 	}
 	
 	
@@ -57,8 +72,8 @@ header.navigation-header{
 			border-right: 1px solid #e1e1e1;
 			left: -200px;
 			width: 200px;
-			top: 80px;
-			height: calc(100% - 80px);
+			top: 50px;
+			height: calc(100%);
 			z-index: 1000;
 		}
 		
@@ -92,6 +107,9 @@ header.navigation-header{
 	
 	.right-navigation{
 		text-align: right;
+        @include tablet{
+            transform: translateY(5px);
+        }
 		ul{
 			@extend .no-pm;
 			li{
@@ -209,12 +227,6 @@ main.slider{
 	transition-duration: 0.2s;
     position: relative;
     
-	&:hover{
-		transform:scale(1.2);
-        z-index: 20;
-		box-shadow: 0px 0px 10px 5px rgba(#000,0.1);
-	}
-	
 	@include tablet{
 		flex: 1 50%;
 	}
@@ -249,12 +261,19 @@ main.slider{
 		text-align: center;
         font-size: 18px;
         min-height: 50px;
+        @include phone{
+            font-size: 14px;
+        }
 	}
 	
 	img{
 		width: 55%;
 		max-width: 130px;
 		margin: 20px auto;
+        
+        @include phone{
+            width: 70%;
+        }
 	}
 	
 	.tag{
@@ -269,6 +288,14 @@ main.slider{
 		font-size: 12px;
 		margin-right: 20px;
         text-transform: uppercase;
+        
+        @include phone{
+            padding: 0px 5px;
+            font-size: 10px;
+            &:after{
+                border-width: 7px !important;
+            }
+        }
         
         &.hit{
             background: #ffbf29;
@@ -311,6 +338,10 @@ main.slider{
 		width: 100%;
         font-size: 18px;
 		display: block;
+        
+        @include phone{
+            font-size: 16px;
+        }
 	}
 	& div > div{
 		position: relative;
@@ -371,6 +402,10 @@ footer{
 				flex:1 10%;
 				text-align: center;
 				position: relative;
+                
+                @include phone{
+                   flex:1 20%; 
+                }
 				i{float: right; font-size: 5px; top: 8px;position: relative;}
 			}
 		}

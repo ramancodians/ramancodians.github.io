@@ -6,12 +6,12 @@
 */
 /*Screen Breakoints*/
 /*Screen Breakoints*/
-/* line 2, C:/MAMP/htdocs/hitesh_website/styles/scss/partials/_helpers.scss */
+/* line 2, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/partials/_helpers.scss */
 .no-pm, header.navigation-header .left-navigation ul, header.navigation-header .right-navigation ul, .slider-wrap .side-options ul, .slider-wrap .slide-controls i, footer .nav-wrap ul {
   margin: 0px;
   padding: 0px; }
 
-/* line 14, C:/MAMP/htdocs/hitesh_website/styles/scss/partials/_helpers.scss */
+/* line 14, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/partials/_helpers.scss */
 button.themed {
   border-radius: 25px;
   background: transparent;
@@ -19,41 +19,51 @@ button.themed {
   padding: 0px;
   height: 40px;
   background: #1f4ba5; }
-  /* line 22, C:/MAMP/htdocs/hitesh_website/styles/scss/partials/_helpers.scss */
+  /* line 22, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/partials/_helpers.scss */
   button.themed span {
     padding: 10px 18px;
     font-weight: bold;
     font-size: 18px;
     position: relative; }
-    /* line 29, C:/MAMP/htdocs/hitesh_website/styles/scss/partials/_helpers.scss */
+    /* line 29, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/partials/_helpers.scss */
     button.themed span:nth-child(2) {
       left: -4px;
       border-left: 2px solid rgba(204, 204, 204, 0.2); }
 
-/* line 13, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 13, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 .container-fluid {
   max-width: 1200px; }
 
-/* line 17, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 17, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 body {
   background: #eee;
   font-family: "Varela Round", sans-serif;
   margin: 0px auto; }
 
-/* line 23, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 23, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 header.navigation-header {
   background: #FFF;
   height: 80px;
   padding: 20px 0px; }
-  /* line 29, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  @media (max-width: 767px) {
+    /* line 23, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+    header.navigation-header {
+      height: 50px;
+      padding: 7px 0px;
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 999; } }
+  /* line 39, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   header.navigation-header .hamburger-menu {
     display: inline-block;
     display: none; }
     @media (max-width: 767px) {
-      /* line 29, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 39, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       header.navigation-header .hamburger-menu {
         display: inline-block; } }
-  /* line 36, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 46, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   header.navigation-header span#logo {
     font-size: 25px;
     text-decoration: italic;
@@ -61,111 +71,120 @@ header.navigation-header {
     font-family: "PT Serif", serif;
     margin-left: 30px;
     font-weight: bold; }
-  /* line 46, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 480px) {
+      /* line 46, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      header.navigation-header span#logo {
+        margin-left: 5px;
+        font-size: 20px; } }
+  /* line 61, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   header.navigation-header .left-navigation {
     position: relative;
     transition-duration: 0.3s; }
-    /* line 50, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 65, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     header.navigation-header .left-navigation.open {
       left: 0px; }
     @media (max-width: 767px) {
-      /* line 46, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 61, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       header.navigation-header .left-navigation {
         position: fixed;
         background: #FFF;
         border-right: 1px solid #e1e1e1;
         left: -200px;
         width: 200px;
-        top: 80px;
-        height: calc(100% - 80px);
+        top: 50px;
+        height: calc(100%);
         z-index: 1000; } }
-    /* line 68, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 83, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     header.navigation-header .left-navigation ul li {
       list-style-type: none;
       display: inline-block;
       padding: 7px 14px; }
       @media (max-width: 767px) {
-        /* line 68, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 83, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         header.navigation-header .left-navigation ul li {
           display: block;
           border-bottom: 1px solid #e1e1e1;
           padding: 14px; }
-          /* line 76, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 91, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           header.navigation-header .left-navigation ul li:first-child {
             border-top: 1px solid #e1e1e1; } }
-      /* line 81, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 96, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       header.navigation-header .left-navigation ul li i {
         color: #1f4ba5;
         margin-left: 10px; }
         @media (max-width: 767px) {
-          /* line 81, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 96, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           header.navigation-header .left-navigation ul li i {
             float: right; } }
-  /* line 93, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 108, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   header.navigation-header .right-navigation {
     text-align: right; }
-    /* line 97, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 767px) {
+      /* line 108, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      header.navigation-header .right-navigation {
+        transform: translateY(5px); } }
+    /* line 115, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     header.navigation-header .right-navigation ul li {
       list-style-type: none;
       display: inline-block;
       padding: 0px 10px;
       font-size: 20px; }
 
-/* line 110, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 128, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 main.slider {
   min-height: 480px; }
 
-/* line 114, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 132, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 .slider-wrap {
   vertical-align: top;
   position: relative; }
-  /* line 118, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 136, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .slider-wrap .active-area {
     background: url("https://www.imageupload.co.uk/images/2017/05/10/active.png") center no-repeat;
     background-size: cover;
     height: 480px;
     position: relative; }
-    /* line 124, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 142, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .slider-wrap .active-area .hero-wrap {
       max-width: 350px;
       margin-top: 80px; }
-      /* line 127, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 145, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .active-area .hero-wrap .type {
         font-family: "Oswald", sans-serif;
         font-size: 20px;
         color: #1f4ba5;
         margin-bottom: 30px; }
-      /* line 128, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 146, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .active-area .hero-wrap .hero {
         font-size: 46px; }
-      /* line 129, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 147, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .active-area .hero-wrap .sub-hero {
         color: #999;
         font-size: 20px;
         margin: 30px 0px; }
-  /* line 133, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 151, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .slider-wrap .side-options {
     display: inline-block;
     vertical-align: top;
     height: 480px; }
     @media (max-width: 767px) {
-      /* line 133, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 151, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .side-options {
         height: auto; } }
     @media (max-width: 767px) {
-      /* line 141, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 159, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .side-options ul {
         display: flex; } }
-    /* line 146, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 164, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .slider-wrap .side-options ul li {
       height: 120px;
       margin: 0px;
       list-style-type: none; }
-      /* line 151, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 169, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .side-options ul li.active {
         border-left: #1f4ba5 10px solid;
         position: relative; }
-        /* line 154, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 172, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         .slider-wrap .side-options ul li.active:after {
           content: '';
           position: absolute;
@@ -175,21 +194,21 @@ main.slider {
           height: 100%;
           background: rgba(255, 255, 255, 0.7); }
       @media (max-width: 767px) {
-        /* line 146, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 164, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         .slider-wrap .side-options ul li {
           display: inline-block;
           flex: 1 25%;
           height: auto; } }
-      /* line 170, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 188, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .slider-wrap .side-options ul li img {
         height: 100%;
         width: 100%; }
         @media (max-width: 767px) {
-          /* line 170, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 188, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           .slider-wrap .side-options ul li img {
             width: 100%;
             height: auto; } }
-  /* line 182, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 200, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .slider-wrap .slide-controls {
     border-radius: 50%;
     height: 45px;
@@ -200,16 +219,16 @@ main.slider {
     text-align: center;
     position: relative;
     transform: translateY(200px); }
-    /* line 192, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 210, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .slider-wrap .slide-controls i {
       font-size: 35px; }
 
-/* line 197, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 215, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 .product-wrap {
   display: flex;
   flex-wrap: wrap; }
 
-/* line 202, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 220, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 .product {
   background: #FFF;
   flex: 1 1 25%;
@@ -219,33 +238,28 @@ main.slider {
   border-bottom: 1px solid #e1e1e1;
   transition-duration: 0.2s;
   position: relative; }
-  /* line 212, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
-  .product:hover {
-    transform: scale(1.2);
-    z-index: 20;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); }
   @media (max-width: 767px) {
-    /* line 202, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 220, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product {
       flex: 1 50%; } }
-  /* line 222, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 234, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product.featured {
     display: flex;
     justify-content: center;
     align-items: center; }
-    /* line 226, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 238, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product.featured:hover {
       transform: scale(1);
       box-shadow: none; }
-    /* line 230, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 242, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product.featured .wrap {
       position: relative;
       margin: 0px auto;
       max-width: 200px; }
-    /* line 236, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 248, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product.featured h5 {
       color: #999; }
-    /* line 237, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 249, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product.featured h3 {
       font-family: "Oswald", sans-serif;
       letter-spacing: 3px;
@@ -253,20 +267,28 @@ main.slider {
       color: #1f4ba5;
       margin: 30px 0px;
       line-height: 35px; }
-    /* line 245, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 257, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product.featured h4 {
       color: #999; }
-  /* line 248, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 260, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product .title {
     text-align: center;
     font-size: 18px;
     min-height: 50px; }
-  /* line 254, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 480px) {
+      /* line 260, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      .product .title {
+        font-size: 14px; } }
+  /* line 269, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product img {
     width: 55%;
     max-width: 130px;
     margin: 20px auto; }
-  /* line 260, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 480px) {
+      /* line 269, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      .product img {
+        width: 70%; } }
+  /* line 279, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product .tag {
     padding: 2px 10px;
     background: red;
@@ -279,25 +301,33 @@ main.slider {
     font-size: 12px;
     margin-right: 20px;
     text-transform: uppercase; }
-    /* line 273, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 480px) {
+      /* line 279, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      .product .tag {
+        padding: 0px 5px;
+        font-size: 10px; }
+        /* line 295, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+        .product .tag:after {
+          border-width: 7px !important; } }
+    /* line 300, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product .tag.hit {
       background: #ffbf29; }
-      /* line 275, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 302, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .product .tag.hit:after {
         border-left-color: #ffbf29; }
-    /* line 280, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 307, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product .tag.new {
       background: #68be7d; }
-      /* line 282, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 309, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .product .tag.new:after {
         border-left-color: #68be7d; }
-    /* line 287, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 314, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product .tag.sale {
       background: #ff3e2c; }
-      /* line 289, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 316, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .product .tag.sale:after {
         border-left-color: #ff3e2c; }
-    /* line 294, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 321, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .product .tag:after {
       content: '';
       position: absolute;
@@ -309,17 +339,21 @@ main.slider {
       border-top-color: transparent;
       border-right-color: transparent;
       border-bottom-color: transparent; }
-  /* line 308, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 335, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product .price {
     font-weight: bold;
     text-align: center;
     width: 100%;
     font-size: 18px;
     display: block; }
-  /* line 315, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    @media (max-width: 480px) {
+      /* line 335, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+      .product .price {
+        font-size: 16px; } }
+  /* line 346, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product div > div {
     position: relative; }
-  /* line 318, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 349, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .product .original-price {
     float: rigth;
     position: absolute;
@@ -329,91 +363,95 @@ main.slider {
     font-size: 14px;
     text-decoration: line-through; }
 
-/* line 329, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 360, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 .brand-wrap {
   display: flex;
   flex-wrap: wrap; }
-  /* line 333, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 364, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   .brand-wrap .brand {
     flex: 1;
     background: #FFF;
     text-align: center; }
     @media (max-width: 767px) {
-      /* line 333, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 364, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .brand-wrap .brand {
         flex: 1 25%; } }
-    /* line 340, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 371, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     .brand-wrap .brand img {
       opacity: 0.4;
       width: 70%;
       margin: 0px auto; }
-      /* line 344, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 375, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       .brand-wrap .brand img.no-op {
         opacity: 1; }
 
-/* line 350, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+/* line 381, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
 footer {
   color: #EEE;
   background: #333; }
-  /* line 355, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 386, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   footer .sideline {
     border-right: 2px solid #555;
     border-left: 2px solid #555; }
-  /* line 360, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 391, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   footer .nav-wrap {
     width: 100%;
     display: block; }
-    /* line 363, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 394, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     footer .nav-wrap ul {
       border-bottom: 2px solid #555;
       display: flex;
       flex-wrap: wrap; }
-      /* line 368, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 399, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       footer .nav-wrap ul li {
         display: inline-block;
         padding: 20px 0px;
         flex: 1 10%;
         text-align: center;
         position: relative; }
-        /* line 374, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        @media (max-width: 480px) {
+          /* line 399, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
+          footer .nav-wrap ul li {
+            flex: 1 20%; } }
+        /* line 409, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .nav-wrap ul li i {
           float: right;
           font-size: 5px;
           top: 8px;
           position: relative; }
-  /* line 379, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+  /* line 414, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
   footer .sub-footer {
     display: flex;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap; }
     @media (max-width: 767px) {
-      /* line 379, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 414, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       footer .sub-footer {
         flex-order: 1 0 0; } }
-    /* line 388, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 423, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     footer .sub-footer .brand {
       padding-top: 40px;
       flex: 1;
       border-right: 2px solid #555; }
       @media (max-width: 767px) {
-        /* line 388, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 423, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .brand {
           flex: 1 50%;
           border-right: none;
           order: 2; } }
-    /* line 399, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 434, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     footer .sub-footer .sign-up-wrap {
       padding-top: 30px;
       padding-bottom: 30px;
       flex: 3; }
       @media (max-width: 767px) {
-        /* line 399, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 434, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .sign-up-wrap {
           flex: 1 100%;
           order: 1;
           border-bottom: 2px solid #555; } }
-      /* line 410, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 445, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       footer .sub-footer .sign-up-wrap .email-wrap {
         margin: 0px auto;
         background: rgba(255, 255, 255, 0.3);
@@ -421,41 +459,41 @@ footer {
         border-radius: 20px;
         display: flex;
         justify-content: center; }
-        /* line 417, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 452, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .sign-up-wrap .email-wrap i.fa {
           padding: 10px;
           width: 40px; }
-        /* line 421, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 456, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .sign-up-wrap .email-wrap input {
           padding: 7px;
           outline: none;
           flex: 1;
           border: none;
           background: transparent; }
-          /* line 427, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 462, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           footer .sub-footer .sign-up-wrap .email-wrap input::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
             color: #CCC; }
-          /* line 430, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 465, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           footer .sub-footer .sign-up-wrap .email-wrap input::-moz-placeholder {
             /* Firefox 19+ */
             color: #CCC; }
-          /* line 433, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 468, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           footer .sub-footer .sign-up-wrap .email-wrap input:-ms-input-placeholder {
             /* IE 10+ */
             color: #CCC; }
-          /* line 436, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 471, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           footer .sub-footer .sign-up-wrap .email-wrap input:-moz-placeholder {
             /* Firefox 18- */
             color: #CCC; }
-      /* line 442, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 477, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       footer .sub-footer .sign-up-wrap ul.legal {
         margin-top: 15px; }
-        /* line 444, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 479, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .sign-up-wrap ul.legal li {
           display: inline-block;
           padding: 0px 10px; }
-    /* line 451, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+    /* line 486, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
     footer .sub-footer .media {
       flex: 1;
       margin-top: 0px;
@@ -463,11 +501,11 @@ footer {
       display: flex;
       flex-direction: column; }
       @media (max-width: 767px) {
-        /* line 451, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 486, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .media {
           flex: 1 50%;
           order: 3; } }
-      /* line 463, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+      /* line 498, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
       footer .sub-footer .media ul.media-links {
         padding: 0px;
         flex: 1;
@@ -475,11 +513,11 @@ footer {
         align-items: center;
         justify-content: center;
         margin-top: 0px; }
-        /* line 471, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 506, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .media ul.media-links:first-child {
           border-bottom: 2px solid #555;
           margin-top: 20px; }
-        /* line 475, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+        /* line 510, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
         footer .sub-footer .media ul.media-links li {
           list-style-type: none;
           display: inline-block;
@@ -487,7 +525,7 @@ footer {
           justify-content: center;
           flex: 1;
           text-align: center; }
-          /* line 482, C:/MAMP/htdocs/hitesh_website/styles/scss/main.scss */
+          /* line 517, C:/MAMP/htdocs/ramancodians.github.io/rentomojo/styles/scss/main.scss */
           footer .sub-footer .media ul.media-links li i {
             opacity: 0.5;
             width: 40px;
