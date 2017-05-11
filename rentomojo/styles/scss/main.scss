@@ -1,0 +1,492 @@
+/*
+    coded by : Raman Choudhary
+    email : hello@raman.ch
+    date : 11-05-2017 | 10:26 AM
+    github: /ramancodians
+*/
+
+@import 'partials/variables';
+@import 'partials/mq';
+@import 'partials/helpers';
+
+
+.container-fluid{
+    max-width: 1200px;
+}
+
+body{
+	background: #eee;
+	font-family : $font-main;
+    margin: 0px auto;
+}
+
+header.navigation-header{
+	background: #FFF;
+	height: 80px;
+	padding: 20px 0px;
+	
+	//menu
+	.hamburger-menu{
+		display: inline-block;
+		display: none;
+		@include tablet{
+			display : inline-block;
+		}
+	}
+	span#logo{
+		font-size: 25px;
+		text-decoration: italic;
+		color: $base-color;
+		font-family: $font-logo;
+		margin-left: 30px;
+		font-weight: bold;
+	}
+	
+	
+	.left-navigation{
+		position: relative;
+		transition-duration: 0.3s;
+		
+		&.open{
+			left:0px;
+		}
+		
+		@include tablet{
+			position: fixed;
+			background: #FFF;
+			border-right: 1px solid #e1e1e1;
+			left: -200px;
+			width: 200px;
+			top: 80px;
+			height: calc(100% - 80px);
+			z-index: 1000;
+		}
+		
+		ul{
+			@extend .no-pm;
+			
+			li{
+				list-style-type: none;
+				display: inline-block;
+				padding: 7px 14px;
+				@include tablet{
+					display: block;
+					border-bottom: 1px solid #e1e1e1;
+					padding: 14px;
+					&:first-child{
+						border-top: 1px solid #e1e1e1;
+					}
+				}
+				
+				i{
+					color: $base-color;
+					margin-left: 10px;
+					
+					@include tablet{
+						float: right;
+					}
+				}
+			}
+		}
+	}
+	
+	.right-navigation{
+		text-align: right;
+		ul{
+			@extend .no-pm;
+			li{
+				list-style-type: none;
+				display: inline-block;
+				padding: 0px 10px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+// Main Styles
+
+
+main.slider{
+	min-height: 480px;
+}
+
+.slider-wrap{
+	vertical-align: top;
+	position: relative;
+	
+	.active-area{
+		background: url('https://www.imageupload.co.uk/images/2017/05/10/active.png') center no-repeat;
+		background-size: cover;
+		height: 480px;
+		position: relative;
+		
+		.hero-wrap{
+			max-width: 350px;
+			margin-top: 80px;
+			.type {font-family: $font-highlight; font-size: 20px; color: $base-color; margin-bottom: 30px;}
+			.hero{font-size: 46px;}
+			.sub-hero{color: #999; font-size: 20px;margin: 30px 0px;}
+		}
+		
+	}
+	.side-options{
+		display: inline-block;
+		vertical-align:top;
+		height: 480px;
+		@include tablet{
+			height: auto;
+		}
+		
+		ul{
+			@extend .no-pm;
+			@include tablet{
+				display: flex;
+			}
+			li{
+				height: 120px;
+				margin: 0px;
+				list-style-type: none;
+                
+                &.active{
+                    border-left: $base-color 10px solid;
+                    position: relative;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(#fff,0.7);
+                    }
+                }
+				
+				@include tablet{
+					display: inline-block;
+					flex: 1 25%;
+					height: auto;
+				}
+				img{
+					height: 100%;
+                    width: 100%;
+					@include tablet{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	
+	.slide-controls{
+		border-radius: 50%;
+		height: 45px;
+		width:  45px;
+		border: 4px solid #999;
+		margin: 0px auto;
+		color: #999;
+		text-align: center;
+		position: relative;
+		transform:translateY(200px);
+		i{@extend .no-pm; font-size: 35px;}
+	}
+}
+
+
+.product-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product{
+	background: #FFF;
+	flex:1 1 25%;
+	padding: 20px;
+	max-height: 340px;
+	border-right: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	transition-duration: 0.2s;
+    position: relative;
+    
+	&:hover{
+		transform:scale(1.2);
+        z-index: 20;
+		box-shadow: 0px 0px 10px 5px rgba(#000,0.1);
+	}
+	
+	@include tablet{
+		flex: 1 50%;
+	}
+	
+	&.featured{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		&:hover{
+			transform:scale(1);
+			box-shadow: none;
+		}
+		.wrap{
+			position: relative;
+			margin: 0px auto;
+            max-width: 200px;
+            
+		}
+		h5{color: #999; }
+		h3{
+			font-family: $font-highlight;
+			letter-spacing: 3px;
+			font-size: 27px;
+			color: $base-color;
+			margin: 30px 0px;
+			line-height: 35px;
+		}
+		h4{color: #999;}
+	}
+	
+	.title{
+		text-align: center;
+        font-size: 18px;
+        min-height: 50px;
+	}
+	
+	img{
+		width: 55%;
+		max-width: 130px;
+		margin: 20px auto;
+	}
+	
+	.tag{
+		padding: 2px 10px;
+		background: red;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		position: absolute;
+		left: 0px;
+		color: #FFF;
+		font-weight: bold;
+		font-size: 12px;
+		margin-right: 20px;
+        text-transform: uppercase;
+        
+        &.hit{
+            background: #ffbf29;
+            &:after{
+                border-left-color: #ffbf29;
+            }
+        }
+        
+        &.new{
+            background: #68be7d;
+            &:after{
+                border-left-color: #68be7d;
+            }
+        }
+        
+         &.sale{
+            background: #ff3e2c;
+            &:after{
+                border-left-color: #ff3e2c;
+            }
+        }
+		
+		&:after{
+			content: '';
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			left: 100%;
+			top: 0px;
+			border: red 10px solid;
+			border-top-color: transparent;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+	
+	.price{
+		font-weight: bold;
+		text-align: center;
+		width: 100%;
+        font-size: 18px;
+		display: block;
+	}
+	& div > div{
+		position: relative;
+	}
+	.original-price{
+		float: rigth;
+		position: absolute;
+		color: #999;
+		top: 0px;
+		right: 10px;
+		font-size: 14px;
+		text-decoration: line-through;
+	}
+}
+
+.brand-wrap{
+	display: flex;
+	flex-wrap : wrap;
+	
+	.brand{
+		flex : 1;
+		background: #FFF;
+		text-align: center;
+		@include tablet{
+			flex : 1 25%;
+		}
+		img{
+			opacity: 0.4;
+			width: 70%;
+			margin: 0px auto;
+			&.no-op{
+			opacity: 1;}
+		}
+	}
+}
+
+footer{
+	color: #EEE;
+	background: #333;
+    
+    //helper
+    .sideline{
+        border-right: 2px solid #555;
+        border-left: 2px solid #555;
+    }
+	
+	.nav-wrap{
+		width: 100%;
+		display: block;
+		ul{
+			@extend .no-pm;
+			border-bottom: 2px solid #555;
+			display: flex;
+            flex-wrap: wrap;
+			li{
+				display: inline-block;
+				padding: 20px 0px;
+				flex:1 10%;
+				text-align: center;
+				position: relative;
+				i{float: right; font-size: 5px; top: 8px;position: relative;}
+			}
+		}
+	}
+	
+	.sub-footer{
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include tablet{
+			flex-order: 1 0 0;
+		}
+		
+		.brand{
+			padding-top: 40px;
+			flex: 1;
+			border-right: 2px solid #555;
+			@include tablet{
+				flex: 1 50%;
+				border-right: none;
+				order: 2;
+			}
+		}
+		
+		.sign-up-wrap{
+			padding-top: 30px;
+			padding-bottom: 30px;
+			flex: 3;
+			
+			@include tablet{
+				flex: 1 100%;
+				order: 1;
+				border-bottom: 2px solid #555;
+			}
+			
+			.email-wrap{
+				margin: 0px auto;
+				background: rgba(#fff,0.3);
+				max-width: 300px;
+				border-radius:20px;
+				display: flex;
+				justify-content: center;
+				i.fa{
+					padding: 10px;
+					width: 40px;
+				}
+				input{
+					padding: 7px;
+					outline: none;
+					flex:1;
+					border: none;
+					background: transparent;
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						color: #CCC;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						color: #CCC;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+						color: #CCC;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+						color: #CCC;
+					}
+				}
+			}
+			
+			ul.legal{
+				margin-top: 15px;
+				li{
+					display: inline-block;
+					padding: 0px 10px;
+				}
+			}
+		}
+		
+		.media{
+			flex:1;
+			margin-top: 0px;
+			border-left: 2px solid #555;
+			display: flex;
+			flex-direction: column;
+			
+			@include tablet{
+				flex: 1 50%;
+				order: 3;
+			}
+			
+			ul.media-links{
+				padding: 0px;
+				flex:1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 0px;
+				
+				&:first-child{
+					border-bottom: 2px solid #555;
+					margin-top: 20px;
+				}
+				li{
+					list-style-type: none;
+					display: inline-block;
+					align-items: center;
+					justify-content: center;
+					flex:1;
+					text-align: center;
+					i{
+						opacity: 0.5;
+						width: 40px;
+						font-size: 20px;
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
