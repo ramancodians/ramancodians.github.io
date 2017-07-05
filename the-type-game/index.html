@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Type Game by Raman Choudahry</title>
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:description" content="Let's see how fast you can type, challenge your friends">
+    <meta name="twitter:app:name:iphone" content="Sorted"/>
+    <meta name="twitter:app:name:ipad" content="Sorted" />
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Inconsolata|Raleway" rel="stylesheet">
+    <meta property="og:title" content="The Type Game"/>
+    <meta property="og:type" content="game"/>
+    <meta property="og:url" content="https://raman.ch/the-type-game"/>
+    <meta property="og:site_name" content="The Type game"/>
+    <meta property="og:description" content="Let's see how fast you can type, challenge your friends"/>
+    <meta property="og:image" content="https://raman.ch/the-type-game/social.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab" rel="stylesheet">
+    
+    <style media="screen">
+      .loader{
+        margin-top: 100px;
+        text-align: center;
+      }
+    </style>
+    
+    <script type="text/javascript">
+     var globalStore = {};
+     var codePenProjectId = 'NgwdXd';
+      $(document).ready(function(){
+        //document loaded
+        $.when(
+          // Get the HTML
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".html", function(html) {
+              globalStore.html = html;
+            }),
+            // Get the CSS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".css", function(css) {
+              globalStore.css = css;
+            }),
+            // Get the JS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".js",function(js){
+              globalStore.js = js;
+            })
+          ).then(function() {
+            // Add Res to page
+            $("body").html(globalStore.html);
+            $("<style />").html(globalStore.css).appendTo("head");
+            $("<script/>").html(globalStore.js).appendTo("body");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="loader">
+      <i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i>
+    </div>
+  </body>
+</html>
