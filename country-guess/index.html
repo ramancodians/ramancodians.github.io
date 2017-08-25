@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#222" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Carter+One|Fredericka+the+Great|Love+Ya+Like+A+Sister" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="launch">
+  <h1>Guess The Country!</h1>
+  <button class="btn start" onclick="startGame()">Start</button>
+</div>
+
+<div class="gameover">
+  <h1>Game Over :-(</h1>
+  <h3>You Guessed <span class="finalscore">..</span> countries right.</h3>
+  <button class="btn start" onclick="resetGame()"e>Back to Start</button>
+</div>
+
+  <div class="game">
+    <header>
+      <div class="time">
+        <h1>Time : 1:00</h1>
+      </div>
+      <div class="score">
+        <h1>Score : 0</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="q">
+        <h1 class="countryName">...</h1>
+        <span id="aaa"></span>
+      </div>
+
+      <div class="ops">
+          <div class="o">
+            <img class="res" src="./res/flags/in.png" alt="countries">
+          </div>
+          <div class="o">
+            <img class="res" src="./res/flags/gb.png" alt="countries">
+          </div>
+          <div class="o">
+            <img class="res" src="./res/flags/pk.png" alt="countries">
+          </div>
+          <div class="o">
+            <img class="res" src="./res/flags/ch.png" alt="countries">
+          </div>
+      </div>
+    </main>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js">
+    </script>
+    <script
+      src="app.js">
+    </script>
+</body>
+</html>

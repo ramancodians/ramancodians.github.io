@@ -1,0 +1,149 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.launch,.gameover{
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+  background: #333;
+  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Love Ya Like A Sister', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background: url("./res/bg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.btn{
+  padding: 12px 50px;
+  border-radius: 10px;
+  border: 0px;
+  background: transparent;
+  border: 2px solid #FFF;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  transition-duration: 0.2s;
+
+}
+
+.btn:active{
+  background: #FFF;
+  color: #000;
+  border: 2px solid #999;
+  transform: scale(0.9);
+  outline: 0px;
+}
+
+.launch:after,
+.gameover:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.7);
+  z-index: -1;
+}
+.launch h1,
+.gameover h1{
+  font-size: 40px;
+}
+
+.gameover{
+  padding-top: 100px;
+  display: none;
+}
+
+
+.game{
+  display: flex;
+  flex: 1;
+  min-height: 90vh;
+  flex-direction: column;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.score,
+.time{
+  flex: 1;
+  font-size: 10px;
+}
+
+.score{
+  text-align: right;
+}
+
+.time{
+
+}
+
+main{
+  padding: 10px;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.q{
+  padding: 20px;
+  background: yellow;
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ops{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.o{
+  padding: 10px;
+  min-height: 110px;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  margin: 2.5%;
+}
+
+.o h6{
+  pointer-events: none;
+}
+
+img.res{
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
