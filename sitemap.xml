@@ -1,34 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://raman.ch/</loc>
-  <lastmod>2016-09-15T14:28:39+00:00</lastmod>
-</url>
-
-
-<url>
-  <loc>http://raman.ch/#/projects</loc>
-  <lastmod>2016-09-15T14:28:39+00:00</lastmod>
-</url>
-
-<url>
-  <loc>http://raman.ch/#/about</loc>
-  <lastmod>2016-09-15T14:28:39+00:00</lastmod>
-</url>
-
-<url>
-  <loc>http://raman.ch/#/hire-me</loc>
-  <lastmod>2016-09-15T14:28:39+00:00</lastmod>
-</url>
-
-<url>
-  <loc>http://raman.ch/#/contact</loc>
-  <lastmod>2016-09-15T14:28:39+00:00</lastmod>
-</url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:urlset xmlns:ns1="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ns1:url>
+		<ns1:loc>https://www.raman.ch/</ns1:loc>
+		<ns1:changefreq>daily</ns1:changefreq>
+		<ns1:priority>1</ns1:priority>
+	</ns1:url>
+	<ns1:url>
+		<ns1:loc>https://raman.ch/#/about</ns1:loc>
+		<ns1:changefreq>daily</ns1:changefreq>
+		<ns1:priority>0.9</ns1:priority>
+	</ns1:url>
+  <ns1:url>
+		<ns1:loc>https://raman.ch/#/projects</ns1:loc>
+		<ns1:changefreq>daily</ns1:changefreq>
+		<ns1:priority>0.9</ns1:priority>
+	</ns1:url>
+  <ns1:url>
+		<ns1:loc>https://raman.ch/#/resume</ns1:loc>
+		<ns1:changefreq>daily</ns1:changefreq>
+		<ns1:priority>0.9</ns1:priority>
+	</ns1:url>
+  <ns1:url>
+		<ns1:loc>https://raman.ch/#/contact</ns1:loc>
+		<ns1:changefreq>daily</ns1:changefreq>
+		<ns1:priority>0.9</ns1:priority>
+	</ns1:url>
+</ns1:urlset>
