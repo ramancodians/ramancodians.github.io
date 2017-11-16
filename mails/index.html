@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mail Rader | Raman Ch.</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      .loader{
+        margin-top: 100px;
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+     var globalStore = {};
+     var codePenProjectId = 'mqBBod';
+      $(document).ready(function(){
+        //document loaded
+        $.when(
+          // Get the HTML
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".html", function(html) {
+              globalStore.html = html;
+            }),
+            // Get the CSS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".css", function(css) {
+              globalStore.css = css;
+            }),
+            // Get the JS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".js",function(js){
+              globalStore.js = js;
+            })
+          ).then(function() {
+            // Add Res to page
+            $("body").html(globalStore.html);
+            $("<style />").html(globalStore.css).appendTo("head");
+            $("<script/>").html(globalStore.js).appendTo("body");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="loader">
+      <i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
