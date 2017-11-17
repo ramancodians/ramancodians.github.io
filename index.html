@@ -102,26 +102,20 @@
     <script src="public/js/magic.js"></script>
 
 </head>
-
 <body ng-controller="MainCtrl">
-
     <div class="loader">
         <div class="holder">
             <i class="fa fa-circle-o-notch fa-4x fa-spin"></i>
         </div>
     </div>
-
-
-
+    <span class="sidebar-btn" ng-click="isOpen = !isOpen">
+      <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
+      <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
+    </span>
     <span class="sidebar-btn" ng-click="isOpen = !isOpen">
             <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
             <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
-      </span>
-    <span class="sidebar-btn" ng-click="isOpen = !isOpen">
-            <i class="fa fa-remove fa-2x" ng-if="isOpen"></i>
-            <i class="fa fa-bars fa-2x" ng-if="!isOpen"></i>
-      </span>
-
+    </span>
     <div class="sidebar animated fadeIn" ng-class="{'fadeOut':!isOpen,'sidebar-open':isOpen}">
         <div class="quote visible-md visible-lg ">
             <h5 class="qod animated" ng-class="{'fadeInUp':isOpen, 'fadeOutDown': !isOpen}">
@@ -154,7 +148,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
