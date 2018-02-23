@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Willfull Defaulter</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans|Varela+Round" rel="stylesheet">
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:description" content="Sorted is student-centric collaboration platform. We are on our mission to empower students with the tools that can make them more productive in College.">
+    <meta name="twitter:app:name:iphone" content="Sorted"/>
+    <meta name="twitter:app:name:ipad" content="Sorted" />
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Inconsolata|Raleway" rel="stylesheet">
+    <meta property="og:title" content="Sorted"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://codians.com/sorted"/>
+    <meta property="og:site_name" content="Sorted"/>
+    <meta property="og:description" content="Sorted is student-centric collaboration platform. We are on our mission to empower students with the tools that can make them more productive in College."/>
+    <meta property="og:image" content="http://codians.github.io/imgs/logo-main.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      .loader{
+        margin-top: 100px;
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+     var globalStore = {};
+     var codePenProjectId = 'GQBEbE';
+      $(document).ready(function(){
+        //document loaded
+        $.when(
+          // Get the HTML
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".html", function(html) {
+              globalStore.html = html;
+            }),
+            // Get the CSS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".css", function(css) {
+              globalStore.css = css;
+            }),
+            // Get the JS
+            $.get("https://codepen.io/raman-ch/pen/"+codePenProjectId+".js",function(js){
+              globalStore.js = js;
+            })
+          ).then(function() {
+            // Add Res to page
+            $("body").html(globalStore.html);
+            $("<style />").html(globalStore.css).appendTo("head");
+            $("<script/>").html(globalStore.js).appendTo("body");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="loader">
+      <i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
