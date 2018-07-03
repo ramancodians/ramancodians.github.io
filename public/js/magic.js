@@ -74,18 +74,15 @@ app.config(['$routeProvider',
 
 
 app.service('ContactForm', function ($firebaseObject, $scope) {
-
     var url = 'https://raman-ch.firebaseio.com/';
     var ref = new Firebase(url);
     return $firebaseObject(ref);
-
 });
 
 app.controller('MainCtrl', function ($scope, $http) {
     //load the quote.json
     $http.get('public/js/quotes.json')
         .then(function (res) {
-
             var n = Math.floor((Math.random() * 5) + 1);
             console.log(n);
             $scope.quotes = res.data[n];
@@ -117,7 +114,6 @@ app.controller('MainCtrl', function ($scope, $http) {
                       ];
 
     //view toggles
-
     $scope.isOpen = false;
     $scope.loaded = false;
 
@@ -137,14 +133,11 @@ app.controller('MainCtrl', function ($scope, $http) {
     $scope.sideMenuToggle = function () {
         $scope.isOpen = !$scope.isOpen;
     }
-
-
 });
 
 app.controller('WorkCtrl', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
-        console.log('loaded projects')
     });
 });
 
@@ -204,26 +197,21 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $fireb
     $scope.MsgSent = false;
     $scope.MailNotSent = false;
     var ref = new Firebase("https://raman-ch.firebaseio.com");
-    
+
     $scope.authObj = $firebaseAuth(ref);
 
     //$scope.msgs = $firebaseArray(ref);
     $scope.$on('$viewContentLoaded', function () {
         $scope.loaded = true;
-        console.log("view loaded!");
-
         $scope.authObj.$authAnonymously().then(function (authData) {
         $scope.logged = true;
 
         }).catch(function (error) {
             console.error("Authentication failed:", error);
         });
-
-
     });
 
     $scope.sendMail = function () {
-
       if($scope.logged){
           var newMsg = {
             "posted": new Date(),
@@ -232,7 +220,7 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $fireb
             "senderName": $scope.senderName
         }
 
-     
+
           ref.child('mails').push(newMsg,function(error){
             if(error){
                 console.log("error!!")
@@ -244,7 +232,7 @@ app.controller('ContactCtrl', function ($scope, $firebaseArray, $timeout, $fireb
                  $scope.MsgSent = true;
             }
          });
-        
+
       }else{
         alert("Something went wrong! Try emailing me instead. raman@love.com");
     }
@@ -267,7 +255,7 @@ app.controller('ProjectCtrl', function ($scope, $routeParams, $location, $rootSc
 
     $('body').scrollTop(0);
 
-    // animate just once, or till page refreshes!! 
+    // animate just once, or till page refreshes!!
     if (!$rootScope.projectAnimationDone) {
         var ProjectStackAnimation = new TimelineLite();
         ProjectStackAnimation.from('work .title', 1, {
